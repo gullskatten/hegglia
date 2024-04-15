@@ -21,7 +21,7 @@ const houses: IdeHouseData[] = [
     bathrooms: 1,
     bra: 103.5,
     description:
-      'Bjørnegga er en av våre mindre boliger med alle funksjoner samlet på ett plan. Passer ypperlig for de som vil bygge seg en liten og effektiv bolig.',
+      'Bjørnegga er en funksjonell bolig med alt samlet på ett plan. Passer ypperlig for de som vil bygge seg en liten og effektiv bolig.',
   },
   {
     id: 0,
