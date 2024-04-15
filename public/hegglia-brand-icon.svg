@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512px" height="512px" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>hegglia-brand-icon</title>
+    <defs>
+        <circle id="path-1" cx="255" cy="255" r="255"></circle>
+        <circle id="path-3" cx="255" cy="255" r="255"></circle>
+    </defs>
+    <g id="hegglia-brand-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Rectangle-+-Path-Mask" transform="translate(1, 0)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <circle stroke="#FFB465" stroke-width="10" cx="255" cy="255" r="250"></circle>
+            <polygon id="Rectangle-Copy" fill="#8C7A52" mask="url(#mask-2)" points="-2.83661983e-14 253 39.1969588 342.649678 72.3146893 365.673096 99.3177239 399.819784 119.557394 409 143.90841 409 197.029058 417.81893 257.490767 399.819784 342.563295 417.81893 384.430952 409 512 510 -8.93729535e-15 510"></polygon>
+            <polygon id="Rectangle" fill="#C6975C" mask="url(#mask-2)" points="-2.83661983e-14 253 39.1969588 342.649678 72.3146893 365.673096 99.3177239 399.819784 119.557394 409 143.90841 409 196.162246 432.631 255.76624 432.631 326.008054 439.787204 353.80984 423.940261 384.430952 386.065691 408.340639 356.762021 425.256592 342.649678 456.604178 320.253827 479.591656 283.245004 512 253 512 510 -2.83661983e-14 510"></polygon>
+            <polygon id="Rectangle-Copy-2" fill="#FFB465" mask="url(#mask-2)" points="326.008054 439.787204 353.80984 423.940261 384.430952 386.065691 408.340639 356.762021 425.256592 342.649678 456.604178 320.253827 479.591656 283.245004 512 253 512 510 1.13688572e-13 510"></polygon>
+            <mask id="mask-4" fill="white">
+                <use xlink:href="#path-3"></use>
+            </mask>
+            <circle stroke="#FFB465" stroke-width="10" cx="255" cy="255" r="250"></circle>
+        </g>
+        <g id="H" transform="translate(179.2188, 163.8182)" fill-rule="nonzero">
+            <polygon id="Path" fill="#FFB465" points="0 186.181818 0 7.87581568 39.3451705 2.84217094e-14 39.3451705 76.7997159 119.200284 76.7997159 119.200284 2.84217094e-14 158.544034 7.87581568 158.544034 186.181818 119.200284 186.181818 119.200284 109.235795 39.3451705 109.235795 39.3451705 186.181818"></polygon>
+            <polygon id="Path-Copy" fill="#C6975C" points="158.544034 186.181818 119.200284 186.181818 119.200284 109.235795"></polygon>
+            <polygon id="Path-Copy-2" fill="#C6975C" points="0 186.181818 39.3451705 109.235795 39.3451705 186.181818"></polygon>
+        </g>
+    </g>
+</svg>

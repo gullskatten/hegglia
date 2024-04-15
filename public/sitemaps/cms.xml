@@ -1,0 +1,30 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+  <url>
+    <loc>https://hegglia.no/posts/inspirasjon</loc>
+    <lastmod>2024-04-12T11:53:17Z</lastmod>
+    <image:image>
+      <image:loc>https://example.com/picture.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hegglia.no/posts/om-hegglia</loc>
+    <lastmod>2024-04-12T10:53:52Z</lastmod>
+    <image:image>
+      <image:loc>https://example.com/picture.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hegglia.no/posts/tilgjengelighet</loc>
+    <lastmod>2024-04-12T10:53:52Z</lastmod>
+    <image:image>
+      <image:loc>https://example.com/picture.jpg</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://hegglia.no/posts/ide-hus</loc>
+    <lastmod>2024-04-12T10:53:52Z</lastmod>
+    <image:image>
+      <image:loc>https://example.com/picture.jpg</image:loc>
+    </image:image>
+  </url>
+</urlset>
