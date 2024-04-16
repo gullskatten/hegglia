@@ -24,7 +24,7 @@ export default function Home() {
         <div className="absolute -z-10 flex h-full w-full flex-grow bg-norway-flyover bg-cover bg-no-repeat shadow-lg blur-sm" />
         <div className="relative z-[1] flex select-none place-items-center   pb-12 pt-24 before:absolute before:h-[500px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-cont-400 before:to-white before:opacity-10 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[200px] after:w-full after:bg-gradient-radial after:from-cont-400 after:via-amber-800 after:to-amber-800  after:opacity-40 after:blur-2xl after:content-['']">
           <Image
-            className="relative max-w-72 animate-fadeIn select-none sm:max-w-80"
+            className="relative max-w-64 animate-fadeIn select-none sm:max-w-80"
             src="/hegglia-brand-icon-white.svg"
             alt="Hegglia Boligfelt Logo"
             width={350}
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       <section className="flex w-full flex-col items-center gap-8 rounded-t-lg bg-teal-900 px-5 py-10 sm:rounded-t-none">
-        <div className="flex w-full max-w-lg flex-col gap-5">
+        <div className="flex w-full max-w-lg flex-col gap-8">
           <h2 className="col-span-2 text-start text-3xl font-bold text-white">
             Hvorfor Hegglia?
           </h2>
@@ -329,7 +329,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex w-full flex-col items-center gap-8 rounded-t-lg bg-teal-900 px-5 py-10 sm:rounded-t-none">
-        <div className="flex w-full max-w-lg flex-col gap-5">
+        <div className="flex w-full max-w-lg flex-col gap-8">
           <h2 className="col-span-2 text-start text-3xl font-bold text-white">
             Hvorfor bosette seg i Skaun kommune?
           </h2>
