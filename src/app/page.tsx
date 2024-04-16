@@ -381,7 +381,7 @@ export default function Home() {
       </section>
       <section className="flex w-full flex-col items-center gap-8 rounded-t-lg bg-teal-950 px-5 py-10 sm:rounded-t-none">
         <div className="flex flex-col items-center justify-center gap-1.5">
-          <p className="opacity-60">Interessert, eller spørsmål?</p>
+          <p className="opacity-60">Interessert eller spørsmål?</p>
           <h3 className="flex items-center gap-1.5 text-3xl font-bold text-white">
             Kontakt oss! <FaceSmileIcon className="h-8 w-8 text-amber-100" />
           </h3>
