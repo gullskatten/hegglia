@@ -1,39 +1,25 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
 function Nav() {
   return (
-    <header className="px-5 flex justify-between items-center w-full sticky top-5 z-10">
+    <header className="sticky top-5 z-10 flex w-full items-center justify-between px-5">
       <div className="flex items-center justify-start gap-5">
         <div>
           <Link
             href="/"
-            className="flex items-center gap-5 text-slate-200 dark:text-slate-200 font-extrabold text-xl xl:text-2xl"
-          >
+            className="flex items-center gap-5 text-xl font-extrabold text-slate-200 xl:text-2xl dark:text-slate-200">
             <Image
               width={32}
               height={32}
-              className="w-8 h-8"
+              className="h-8 w-8"
               src="/favicon.svg"
               alt="Logo"
             />
-            <span className="sm:flex hidden">
-              Hegglia
-            </span>
+            <span className="hidden sm:flex">Hegglia</span>
           </Link>
         </div>
       </div>
-      <nav className="space-x-5">
-        <Link href="/" className="font-medium underline underline-offset-2">
-          Login
-        </Link>
-        <Link
-          href="/download"
-          className="text-sm truncate w-10 font-bold px-3 text-white"
-        >
-          Om Hegglia
-        </Link>
-      </nav>
     </header>
   );
 }
