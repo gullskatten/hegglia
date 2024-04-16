@@ -16,7 +16,7 @@ function Nav() {
               src="/favicon.svg"
               alt="Logo"
             />
-            <span className="hidden sm:flex">Hegglia</span>
+            <span className="hidden sm:flex">Hegglia Boligfelt</span>
           </Link>
         </div>
       </div>
