@@ -22,7 +22,7 @@ export default function Home() {
     <main className="flex w-full flex-col items-center">
       <div className="relative flex w-full flex-col items-center gap-10 bg-black/20">
         <div className="absolute -z-10 flex h-full w-full flex-grow bg-norway-flyover bg-cover bg-no-repeat shadow-lg blur-sm" />
-        <div className="relative z-[1] flex select-none place-items-center   pb-12 pt-24 before:absolute before:h-[500px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-cont-400 before:to-white before:opacity-10 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[200px] after:w-full after:bg-gradient-radial after:from-cont-400 after:via-amber-800 after:to-amber-800  after:opacity-40 after:blur-2xl after:content-['']">
+        <div className="relative z-[1] flex select-none place-items-center pb-12 pt-24 before:absolute before:h-[500px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-cont-400 before:to-white before:opacity-10 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[200px] after:w-full after:bg-gradient-radial after:from-cont-400 after:via-amber-800 after:to-amber-800  after:opacity-40 after:blur-2xl after:content-['']">
           <Image
             className="relative max-w-64 animate-fadeIn select-none sm:max-w-80"
             src="/hegglia-brand-icon-white.svg"
@@ -62,12 +62,12 @@ export default function Home() {
         </div>
       </div>
       <section className="flex w-full items-center justify-center bg-teal-950 px-5 py-16">
-        <div className="animate-enterFromRight grid max-w-lg items-center gap-y-10 sm:w-full sm:grid-cols-2 sm:gap-x-8 sm:gap-y-8">
+        <div className="grid max-w-lg animate-enterFromRight items-center gap-y-10 sm:w-full sm:grid-cols-2 sm:gap-x-8 sm:gap-y-8">
           <div className="flex w-full">
             <div className="flex w-full gap-5 sm:gap-3">
               <HomeModernIcon className="h-12 w-12 text-teal-100" />
               <div className="flex flex-col  sm:text-start ">
-                <h3 className="text-xl font-bold">14 ledige tomter</h3>
+                <h3 className="text-xl font-bold">10 ledige tomter</h3>
                 <p className="text-sm opacity-70">Tomter fra 520-1000m²</p>
               </div>
             </div>
@@ -298,7 +298,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex flex-grow items-end justify-end ">
-                  <span className="flex gap-1.5 text-xs text-slate-400">
+                  <span className="flex items-center gap-1.5 text-xs text-slate-400">
                     Vis på idéhus sine sider{' '}
                     <ArrowTopRightOnSquareIcon className="h-3 w-3" />
                   </span>
