@@ -45,7 +45,7 @@ const documents: DocumentsData[] = [
     name: 'Sak 65/2023 - Kunngjøring fra Skaun Kommune',
     image: '/byggefelt/artikkel-skaun-kommune.png',
     description:
-      'Kunngjøring av vedtatt reguleringsplan for nytt boligfelt - Hegglia gnr/bnr 85/1 på Skaun kommune sine nettsider.',
+      'Kunngjøring av vedtatt reguleringsplan for nytt boligfelt - Hegglia gnr/bnr 85/1 fra Skaun kommune sine nettsider.',
   },
 ] as const;
 
