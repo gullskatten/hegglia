@@ -20,6 +20,11 @@ function Nav() {
           </Link>
         </div>
       </div>
+      <a
+        href={`mailto:kontakt@eokbygg.com`}
+        className={`rounded-sm border border-teal-800 px-3 py-1.5 text-xs font-normal text-white hover:bg-teal-700 focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none`}>
+        Kontakt oss
+      </a>
     </header>
   );
 }
