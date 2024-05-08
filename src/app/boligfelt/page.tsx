@@ -30,18 +30,19 @@ export default function Boligfelt() {
         <div className="animate-float relative z-[1] flex place-items-center pb-12">
           <BoligfeltChart />
         </div>
+        <div className="flex w-full justify-end ">
+          <a
+            href="https://maps.app.goo.gl/nuC3QyZiLDQxjABbA"
+            target="_blank"
+            rel="noopener noreferrer">
+            <span className="flex items-center gap-1.5 px-3 pb-1 text-xs text-slate-400 hover:underline">
+              <ArrowTopRightOnSquareIcon className="h-3 w-3" />
+              Åpne i Google Maps
+            </span>
+          </a>
+        </div>
       </div>
-      <div className="flex w-full justify-end ">
-        <a
-          href="https://maps.app.goo.gl/nuC3QyZiLDQxjABbA"
-          target="_blank"
-          rel="noopener noreferrer">
-          <span className="flex items-center gap-1.5 px-3 pb-1 text-xs text-slate-400 hover:underline">
-            <ArrowTopRightOnSquareIcon className="h-3 w-3" />
-            Åpne i Google Maps
-          </span>
-        </a>
-      </div>
+
       <section className="flex w-full flex-col gap-5 rounded-t-md bg-teal-900 py-1 text-slate-800">
         <BoligfeltTable />
       </section>

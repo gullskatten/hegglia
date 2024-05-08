@@ -239,14 +239,14 @@ export default function BoligfeltChart() {
                 align="center"
                 side="top"
                 sideOffset={-50}
-                className="flex flex-col gap-1.5 rounded-md bg-white shadow-lg focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none">
+                className="animate-slightEnterFromTop flex flex-col gap-1.5 rounded-md bg-white shadow-lg focus:outline-none">
                 {tomt.available && (
                   <Image
                     src={tomt.image}
                     alt={tomt.name}
                     width={300}
                     height={100}
-                    className="h-52 w-full rounded-t-md border-b-4 border-teal-800 object-cover shadow-md"
+                    className="h-52 w-full rounded-t-md border-b-4 border-teal-800 object-cover"
                   />
                 )}
                 <dl className="flex flex-col gap-3 p-3">
@@ -283,7 +283,7 @@ export default function BoligfeltChart() {
                     {tomt.description}
                   </dd>
                 </dl>
-                <Popover.Arrow className="h-3 w-3 fill-teal-700" />
+                <Popover.Arrow className="h-3 w-3 fill-white" />
               </Popover.Content>
             </Popover.Portal>
           </Popover.Root>

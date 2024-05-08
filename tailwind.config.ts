@@ -64,6 +64,10 @@ const config: Config = {
           from: { opacity: '0', transform: 'translateY(-200px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
+        slightEnterFromTop: {
+          from: { opacity: '0.1', transform: 'translateY(-10px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
         enterFromBottom: {
           from: { opacity: '0', transform: 'translateY(200px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
@@ -89,6 +93,8 @@ const config: Config = {
         enterFromRight: 'enterFromRight 250ms ease',
         enterFromBottom: 'enterFromBottom 250ms ease',
         enterFromTop: 'enterFromTop 250ms ease',
+        slightEnterFromTop:
+          'slightEnterFromTop 150ms cubic-bezier(0, 0, 0.33, 1)',
         float: 'float 3s ease',
         floatInto: 'floatInto 1s ease',
         floatOut: 'floatOut 1s ease',
