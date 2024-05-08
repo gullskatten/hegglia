@@ -8,17 +8,14 @@ import BoligfeltTable from './BoligfeltTable';
 export default function Boligfelt() {
   return (
     <div className="w-full">
-      <div className="relative isolate flex w-full flex-col items-center gap-10 ">
+      <div className="relative isolate flex w-full flex-col items-center gap-5 ">
         <div className="bg-topology-pattern absolute z-0 h-full w-full bg-repeat opacity-10" />
-
         <div className="flex min-w-72 flex-col items-center justify-center gap-3 text-center">
-          <h1 className="flex animate-fadeIn gap-5 px-3 text-4xl font-bold text-white">
+          <h1 className="z-10 mt-5 flex animate-fadeIn gap-5 px-3 text-4xl font-bold text-white">
             Utforsk Boligfeltet
           </h1>
-          <div className="flex w-full items-center justify-center rounded-sm bg-teal-900 py-0.5 text-sm">
-            <p className="flex items-center gap-1.5 ">
-              Klikk på tomtene for mer informasjon
-            </p>
+          <div className="flex w-full items-center justify-center rounded-sm bg-teal-900 px-5 py-0.5 text-sm">
+            <p>Klikk på tomtene for mer informasjon</p>
           </div>
         </div>
         <div className="w-full">
@@ -27,9 +24,10 @@ export default function Boligfelt() {
             <span className="text-sm font-semibold">Retning Nordover</span>
           </div>
         </div>
-        <div className="animate-float relative z-[1] flex place-items-center pb-12">
+        <div className="animate-float relative z-[1] flex place-items-center pb-5">
           <BoligfeltChart />
         </div>
+
         <div className="flex w-full justify-end ">
           <a
             href="https://maps.app.goo.gl/nuC3QyZiLDQxjABbA"
@@ -43,7 +41,15 @@ export default function Boligfelt() {
         </div>
       </div>
 
-      <section className="flex w-full flex-col gap-5 rounded-t-md bg-teal-900 py-1 text-slate-800">
+      <section className="flex w-full flex-col gap-5 bg-teal-900 px-5 py-10">
+        <div>
+          <h2 className="flex items-center gap-1.5 text-3xl font-bold">
+            Prisoversikt
+          </h2>
+          <p className="text-sm ">
+            Tabellen viser tomtene som er tilgjengelige for salg.
+          </p>
+        </div>
         <BoligfeltTable />
       </section>
       <section className="flex w-full flex-col gap-5 rounded-t-md bg-slate-50 px-5 py-10 text-slate-800">

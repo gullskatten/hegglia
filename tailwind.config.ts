@@ -32,26 +32,7 @@ const config: Config = {
               'perspective(60px) translate3d(0px, -65px, 10px) rotate3d(2, 0, 1, 4deg)',
           },
         },
-        floatInto: {
-          '0%': {
-            transform:
-              'perspective(60px) translate3d(0px, -35px, 8px) rotate3d(2, 0, 2, 6deg)',
-          },
-          '100%': {
-            transform:
-              'perspective(60px) translate3d(0px, -65px, 10px) rotate3d(2, 0, 1, 4deg)',
-          },
-        },
-        floatOut: {
-          '100%': {
-            transform:
-              'perspective(60px) translate3d(0px, -35px, 8px) rotate3d(2, 0, 2, 6deg)',
-          },
-          '0%': {
-            transform:
-              'perspective(60px) translate3d(0px, -65px, 10px) rotate3d(2, 0, 1, 4deg)',
-          },
-        },
+
         enterFromRight: {
           from: { opacity: '0', transform: 'translateX(200px)' },
           to: { opacity: '1', transform: 'translateX(0)' },
@@ -94,10 +75,8 @@ const config: Config = {
         enterFromBottom: 'enterFromBottom 250ms ease',
         enterFromTop: 'enterFromTop 250ms ease',
         slightEnterFromTop:
-          'slightEnterFromTop 150ms cubic-bezier(0, 0, 0.33, 1)',
+          'slightEnterFromTop 200ms cubic-bezier(0, 0, 0.33, 1)',
         float: 'float 3s ease',
-        floatInto: 'floatInto 1s ease',
-        floatOut: 'floatOut 1s ease',
         slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
         slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },

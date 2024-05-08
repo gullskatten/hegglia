@@ -68,7 +68,7 @@ export default function Home() {
               <HomeModernIcon className="h-12 w-12 text-teal-100" />
               <div className="flex flex-col  sm:text-start ">
                 <h3 className="text-xl font-bold">10 ledige tomter</h3>
-                <p className="text-sm opacity-70">Tomter fra 520-1000m²</p>
+                <p className="text-sm opacity-70">Tomter fra 800-1300 m²</p>
               </div>
             </div>
           </div>
