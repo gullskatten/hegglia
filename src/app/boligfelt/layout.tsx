@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '../globals.css';
-import Footer from '../_components/footer';
 import Nav from '../_components/nav';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -9,21 +8,23 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'Utforsk Boligfeltet | Hegglia Boligfelt',
   description:
-    'Få mer informasjon om tomtene på boligfeltet og det planlagte utbyggingsarbeidet. Informasjon om priser finner du også her.',
+    'Få mer informasjon om tomtene på boligfeltet og det planlagte utbyggingsarbeidet.',
   openGraph: {
-    url: 'https://heggliaboligfelt.no/boligfelt',
+    url: 'https://hegglia-test.netlify.app/boligfelt',
     title: 'Utforsk Boligfeltet | Hegglia Boligfelt',
     description:
-      'Få mer informasjon om tomtene på boligfeltet ved å bruke vår boligfeltutforsker. Informasjon om priser finner du også her.',
+      'Få mer informasjon om tomtene på boligfeltet ved å bruke vår boligfeltutforsker.',
     locale: 'no_NO',
     siteName: 'Hegglia Boligfelt',
-    emails: ['kontakt@heggliaboligfelt.no'],
+    countryName: 'Norge',
+    determiner: 'auto',
+    emails: ['kontakt@eokbygg.com'],
     images: [
       {
-        url: 'https://hegglia-test.netlify.app/hegglia-og-1200.png',
+        url: 'https://hegglia-test.netlify.app/og-1200-utforsk.webp',
+        alt: 'Hegglia Boligfelt',
         width: 1200,
         height: 630,
-        alt: 'Hegglia Boligfelt',
       },
     ],
     type: 'website',
@@ -45,16 +46,16 @@ export const metadata: Metadata = {
       'Velkommen til Hegglia Boligfelt, et boligfelt med nærhet til flotte naturopplevelser.',
     images: [
       {
-        url: 'https://hegglia-test.netlify.app/hegglia-og-1200.png',
-        alt: 'Hegglia Boligfelt',
+        url: 'https://hegglia-test.netlify.app/og-1200-twitter-min.webp',
+        alt: 'Velkommen til Hegglia Boligfelt',
         width: 1200,
-        height: 630,
+        height: 675,
       },
     ],
   },
   icons: [
     {
-      url: 'localhost:3000/fav.svg',
+      url: 'https://hegglia-test.netlify.app/favicon.svg',
       sizes: '32x32',
       type: 'image/svg+xml',
     },

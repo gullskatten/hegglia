@@ -14,8 +14,6 @@ export default function BoligfeltChart() {
     }, 2050);
   }, []);
 
-  console.log(showPopoverHint);
-
   return (
     <svg
       className="w-screen max-w-xl"

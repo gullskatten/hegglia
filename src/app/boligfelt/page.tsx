@@ -2,7 +2,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import documents from '../_data/boligfelt';
 import BoligfeltChart from './BoligfeltChart';
-import { ArrowUpIcon, CursorArrowRaysIcon } from '@heroicons/react/24/solid';
+import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
 
 export default function Boligfelt() {
