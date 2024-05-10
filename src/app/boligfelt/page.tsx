@@ -2,7 +2,7 @@ import { ArrowTopRightOnSquareIcon } from '@heroicons/react/20/solid';
 import Image from 'next/image';
 import documents from '../_data/boligfelt';
 import BoligfeltChart from './BoligfeltChart';
-import { ArrowUpIcon } from '@heroicons/react/24/solid';
+import { ArrowUpIcon, CursorArrowRaysIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
 
 export default function Boligfelt() {
@@ -14,12 +14,9 @@ export default function Boligfelt() {
           <h1 className="z-10 mt-5 flex animate-fadeIn gap-5 px-3 text-4xl font-bold text-white">
             Utforsk Boligfeltet
           </h1>
-          <div className="flex w-full items-center justify-center rounded-sm bg-teal-900 px-5 py-0.5 text-sm">
-            <p>Klikk på tomtene for mer informasjon</p>
-          </div>
         </div>
         <div className="w-full">
-          <div className="flex flex-col items-center justify-center gap-1.5 text-center">
+          <div className="flex flex-col items-center justify-center gap-1.5 text-center text-white">
             <ArrowUpIcon className="h-5 w-5" />
             <span className="text-sm font-semibold">Retning Nordover</span>
           </div>
@@ -28,14 +25,14 @@ export default function Boligfelt() {
           <BoligfeltChart />
         </div>
 
-        <div className="flex w-full justify-end ">
+        <div className="z-10 flex w-full justify-end">
           <a
-            href="https://maps.app.goo.gl/nuC3QyZiLDQxjABbA"
+            href="https://maps.app.goo.gl/ZjPcx9e3bLakYwgbA?g_st=ic"
             target="_blank"
             rel="noopener noreferrer">
             <span className="flex items-center gap-1.5 px-3 pb-1 text-xs text-slate-400 hover:underline">
               <ArrowTopRightOnSquareIcon className="h-3 w-3" />
-              Åpne i Google Maps
+              Vis i Google Street View
             </span>
           </a>
         </div>

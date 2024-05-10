@@ -76,7 +76,7 @@ const config: Config = {
         enterFromTop: 'enterFromTop 250ms ease',
         slightEnterFromTop:
           'slightEnterFromTop 200ms cubic-bezier(0, 0, 0.33, 1)',
-        float: 'float 3s ease',
+        float: 'float 2s ease',
         slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
         slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
       },

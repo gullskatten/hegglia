@@ -2,10 +2,20 @@
 
 import React from 'react';
 import * as Popover from '@radix-ui/react-popover';
-import Image from 'next/image';
 import { boligfeltData } from '../_data/boligfelt';
+import { CursorArrowRaysIcon } from '@heroicons/react/24/outline';
 
 export default function BoligfeltChart() {
+  const [showPopoverHint, setShowPopoverHint] = React.useState(false);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setShowPopoverHint(true);
+    }, 2050);
+  }, []);
+
+  console.log(showPopoverHint);
+
   return (
     <svg
       className="w-screen max-w-xl"
@@ -27,7 +37,10 @@ export default function BoligfeltChart() {
           className="fill-teal-700"></path>
 
         {boligfeltData.map((tomt, i) => (
-          <Popover.Root key={tomt.id}>
+          <Popover.Root
+            key={tomt.id + `-${showPopoverHint}`}
+            defaultOpen={i === 0 && showPopoverHint}
+            onOpenChange={() => setShowPopoverHint(false)}>
             <Popover.Trigger asChild>
               {tomt.type === 'polygon' ? (
                 <g>
@@ -50,7 +63,7 @@ export default function BoligfeltChart() {
                     d={tomt.path}
                     id={tomt.id}
                     stroke="#000000"
-                    className={`cursor-pointer fill-white transition-colors hover:fill-teal-600 ${
+                    className={`cursor-pointer transition-colors hover:fill-teal-600 ${
                       !tomt.available ? 'fill-slate-600' : 'fill-white'
                     }`}></path>
                   <text x={tomt.x} y={tomt.y} className="fill-black text-xs">
@@ -65,46 +78,58 @@ export default function BoligfeltChart() {
                 side="top"
                 sideOffset={-50}
                 className="animate-slightEnterFromTop flex flex-col gap-1.5 rounded-md bg-white shadow-lg focus:outline-none">
-                {tomt.available && (
-                  <img
-                    src={tomt.image}
-                    className="h-52 rounded-t-md border-b-4 border-teal-800"
-                  />
-                )}
-                <dl className="flex flex-col gap-3 p-3">
-                  <div className="flex flex-col gap-1.5">
-                    <div className="flex w-full items-center justify-between gap-1.5">
-                      <dt className="text-xl font-bold text-black">
-                        {tomt.name}
-                      </dt>
-                      {tomt.available && (
-                        <a
-                          href={`mailto:kontakt@eokbygg.com?subject=Interesse%20for%20${tomt.name}&body=Hei!%0A%0AJeg%20er%20interessert%20i%20%C3%A5%20h%C3%B8re%20mer%20om%20${tomt.name}.%20%0A%0AMvh%2C%0A`}
-                          className={`rounded-sm bg-teal-800 px-3 py-1.5 text-xs font-normal text-white hover:bg-teal-700 focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none`}>
-                          Meld interesse
-                        </a>
-                      )}
+                {showPopoverHint ? (
+                  <div>
+                    <div className="flex w-full items-center justify-center gap-1.5 p-3 text-sm font-medium text-teal-950">
+                      <CursorArrowRaysIcon className="h-5 w-5 animate-pulse text-teal-700" />{' '}
+                      <p>Klikk på tomtene for mer informasjon</p>
                     </div>
-                    <dd className="flex items-center gap-3 text-sm font-semibold text-black">
-                      {tomt.available && (
-                        <>
-                          <span>{tomt.kvm} m²</span>{' '}
-                          <span className="text-teal-800">
-                            {Intl.NumberFormat('nb', {
-                              currency: 'NOK',
-                              unitDisplay: 'long',
-                              style: 'currency',
-                              maximumFractionDigits: 0,
-                            }).format(tomt.price)}
-                          </span>
-                        </>
-                      )}
-                    </dd>
                   </div>
-                  <dd className=" max-w-[330px] text-pretty text-sm text-black">
-                    {tomt.description}
-                  </dd>
-                </dl>
+                ) : (
+                  <>
+                    {tomt.available && (
+                      <img
+                        src={tomt.image}
+                        className="h-52 rounded-t-md border-b-4 border-teal-800"
+                      />
+                    )}
+                    <dl className="flex flex-col gap-3 p-3">
+                      <div className="flex flex-col gap-1.5">
+                        <div className="flex w-full items-center justify-between gap-1.5">
+                          <dt className="text-xl font-bold text-black">
+                            {tomt.name}
+                          </dt>
+                          {tomt.available && (
+                            <a
+                              href={`mailto:kontakt@eokbygg.com?subject=Interesse%20for%20${tomt.name}&body=Hei!%0A%0AJeg%20er%20interessert%20i%20%C3%A5%20h%C3%B8re%20mer%20om%20${tomt.name}.%20%0A%0AMvh%2C%0A`}
+                              className={`rounded-sm bg-teal-800 px-3 py-1.5 text-xs font-normal text-white hover:bg-teal-700 focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none`}>
+                              Meld interesse
+                            </a>
+                          )}
+                        </div>
+                        <dd className="flex items-center gap-3 text-sm font-semibold text-black">
+                          {tomt.available && (
+                            <>
+                              <span>{tomt.kvm} m²</span>{' '}
+                              <span className="text-teal-800">
+                                {Intl.NumberFormat('nb', {
+                                  currency: 'NOK',
+                                  unitDisplay: 'long',
+                                  style: 'currency',
+                                  maximumFractionDigits: 0,
+                                }).format(tomt.price)}
+                              </span>
+                            </>
+                          )}
+                        </dd>
+                      </div>
+                      <dd className=" max-w-[330px] text-pretty text-sm text-black">
+                        {tomt.description}
+                      </dd>
+                    </dl>
+                  </>
+                )}
+
                 <Popover.Arrow className="h-3 w-3 fill-white" />
               </Popover.Content>
             </Popover.Portal>
