@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     emails: ['kontakt@eokbygg.com'],
     images: [
       {
-        url: 'https://hegglia-test.netlify.app/og-1200-utforsk.webp',
+        url: 'https://hegglia-test.netlify.app/og-1200-main.webp',
         alt: 'Hegglia Boligfelt',
         width: 1200,
         height: 630,
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     startupImage: {
-      url: 'https://hegglia-test.netlify.app/hegglia-og-1200.png',
+      url: 'https://hegglia-test.netlify.app/og-1200-main.webp',
       media:
         '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
     },

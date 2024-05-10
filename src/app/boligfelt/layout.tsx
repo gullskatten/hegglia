@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     startupImage: {
-      url: 'https://hegglia-test.netlify.app/hegglia-og-1200.png',
+      url: 'https://hegglia-test.netlify.app/og-1200-main.webp',
       media:
         '(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)',
     },
