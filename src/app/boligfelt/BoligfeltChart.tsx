@@ -17,9 +17,11 @@ export default function BoligfeltChart() {
   const [currentImageIdx, setCurrentImageIdx] = React.useState(0);
 
   React.useEffect(() => {
-    setTimeout(() => {
+    const t = setTimeout(() => {
       setShowPopoverHint(true);
     }, 2050);
+
+    return () => clearTimeout(t);
   }, []);
 
   return (
@@ -86,7 +88,7 @@ export default function BoligfeltChart() {
                 align="center"
                 side="top"
                 sideOffset={-50}
-                className="animate-slightEnterFromTop flex flex-col gap-1.5 rounded-md bg-white shadow-lg focus:outline-none">
+                className={`"animate-slightEnterFromTop flex overflow-hidden ${showPopoverHint ? '' : 'w-[100vw] max-w-[400px]'} flex-col gap-1.5 rounded-md bg-white shadow-lg focus:outline-none`}>
                 {showPopoverHint ? (
                   <div>
                     <div className="flex w-full items-center justify-center gap-1.5 p-3 text-sm font-medium text-teal-950">
@@ -97,7 +99,7 @@ export default function BoligfeltChart() {
                 ) : (
                   <>
                     {tomt.available && tomt.images.length > 0 && (
-                      <div className="h-52 overflow-y-scroll rounded-t-md border-b-4 border-teal-800 bg-teal-950">
+                      <div className="overflow-y-scroll rounded-t-md border-b-4 border-teal-800 bg-teal-950">
                         <div className="relative flex w-full rounded-t-md">
                           {tomt.images.length > 1 && (
                             <div className="absolute top-3 z-10 flex w-full items-center justify-center text-white">
@@ -118,35 +120,37 @@ export default function BoligfeltChart() {
                               setCurrentImageIdx((prev) => prev - 1)
                             }
                             disabled={currentImageIdx === 0}
-                            className="absolute h-full bg-gradient-to-l from-transparent to-black/50 p-3 text-xs text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none disabled:pointer-events-none disabled:opacity-35">
+                            className="absolute h-full p-3 text-xs text-white focus:text-teal-300 focus:outline-none disabled:pointer-events-none disabled:opacity-35">
                             <ChevronLeftIcon className="h-6 w-6" />
                           </button>
                           <Image
+                            placeholder="blur"
                             alt={`Dronebilde av tomt nummer ${tomt.id} (bilde ${currentImageIdx + 1} av ${tomt.images.length})`}
-                            src={tomt.images[currentImageIdx].src}
-                            width={1080}
+                            src={tomt.images[currentImageIdx]}
+                            width={500}
                             height={600}
-                            className="h-52 w-full"
+                            className="max-h-[250px] min-h-[250px] w-full rounded-t-md bg-cover bg-center bg-no-repeat object-cover"
                           />
                           <div className="absolute bottom-0 left-0 w-full bg-black/50 p-1 text-xs text-white">
                             <span className="flex items-center gap-1.5">
                               <InformationCircleIcon className="h-3 w-3" />{' '}
-                              Illustrasjonen er ikke nøyaktige mål på tomten.
+                              Illustrasjoner er ikke nøyaktige mål på tomten.
                             </span>
                           </div>
                           <button
                             disabled={
                               currentImageIdx === tomt.images.length - 1
                             }
-                            onClick={() =>
-                              setCurrentImageIdx((prev) => prev + 1)
-                            }
-                            className="absolute right-0 h-full bg-gradient-to-r from-transparent to-black/50 p-3 text-xs text-white focus:outline-teal-500 disabled:pointer-events-none disabled:opacity-35">
+                            onClick={() => {
+                              console.log(tomt.images[currentImageIdx]);
+                              setCurrentImageIdx(currentImageIdx + 1);
+                            }}
+                            className="absolute right-0 h-full p-3 text-xs text-white focus:text-teal-300 focus:outline-none disabled:pointer-events-none disabled:opacity-35">
                             <ChevronRightIcon className="h-6 w-6" />
                           </button>
                           <a
                             title={`Åpne bilde ${currentImageIdx + 1} i full størrelse`}
-                            href={tomt.images[currentImageIdx].src}
+                            href={tomt.images[currentImageIdx]?.src ?? '#'}
                             target="_blank"
                             className="absolute bottom-0 right-0 bg-teal-800 p-1 focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
                             <ArrowsPointingOutIcon className="h-4 w-4 text-white" />

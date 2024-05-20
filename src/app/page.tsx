@@ -4,6 +4,7 @@ import {
   ArrowTrendingUpIcon,
   BuildingOffice2Icon,
   BuildingStorefrontIcon,
+  CameraIcon,
   FaceSmileIcon,
   HomeModernIcon,
   MapIcon,
@@ -14,6 +15,14 @@ import { Merriweather } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import houses from './_data/houses';
+import cover from '../../public/byggefelt/tomt/flyover_cover_3_50s.png';
+import cover2 from '../../public/byggefelt/tomt/flyover_cover_5_50s.png';
+import cover3 from '../../public/byggefelt/tomt/flyover_2_50s.png';
+import tiny1 from '../../public/byggefelt/tomt/c_4_25s.png';
+import tiny2 from '../../public/byggefelt/tomt/c_1_25s.png';
+import tiny3 from '../../public/byggefelt/tomt/flyover_3_25s.png';
+import tiny4 from '../../public/byggefelt/tomt/flyover_5_25s.png';
+import tiny5 from '../../public/byggefelt/tomt/flyover_8_25s.png';
 
 const merriweather = Merriweather({ weight: '700', subsets: ['latin'] });
 
@@ -21,7 +30,14 @@ export default function Home() {
   return (
     <main className="flex w-full flex-col items-center">
       <div className="relative flex w-full flex-col items-center gap-10 bg-black/20">
-        <div className="absolute -z-10 flex h-full w-full flex-grow bg-norway-flyover bg-cover bg-no-repeat shadow-lg blur-sm" />
+        <Image
+          placeholder="blur"
+          priority
+          src={cover}
+          alt="Hegglia Boligfelt"
+          className="absolute -z-10 flex h-full w-full flex-grow bg-cover bg-no-repeat object-cover shadow-lg brightness-90"
+        />
+
         <div className="relative z-[1] flex select-none place-items-center pb-12 pt-24 before:absolute before:h-[500px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-cont-400 before:to-white before:opacity-10 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[200px] after:w-full after:bg-gradient-radial after:from-cont-400 after:via-amber-800 after:to-amber-800  after:opacity-40 after:blur-2xl after:content-['']">
           <Image
             className="relative max-w-64 animate-fadeIn select-none sm:max-w-80"
@@ -178,83 +194,140 @@ export default function Home() {
       </section>
 
       <section className="flex w-full flex-col items-center gap-8 rounded-t-lg bg-teal-900 px-5 py-10 sm:rounded-t-none">
-        <div className="flex w-full max-w-lg flex-col gap-8">
-          <h2 className="col-span-2 text-start text-3xl font-bold text-white">
+        <div className="flex w-full max-w-7xl flex-col gap-8 sm:w-full sm:items-center">
+          <h2 className="text-start text-3xl font-bold text-white">
             Hvorfor Hegglia?
           </h2>
-          <div className="flex w-full items-start gap-5">
-            <div className="flex items-start rounded-md bg-white/10 p-3">
-              <svg
-                className="h-12 w-12"
-                width="24px"
-                height="24px"
-                strokeWidth="1.5"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                color="#ffffff">
-                <path
-                  d="M18 10L15 11.5L11 8.5L10 14L13.5 17L14 21.5"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"></path>
-                <path
-                  d="M18 8.5V10V21.5"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"></path>
-                <path
-                  d="M10 17L8 21.5"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"></path>
-                <path
-                  d="M8.5 8.5C7 9.5 6 12 6 12L8 13"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"></path>
-                <path
-                  d="M12 6.5C13.1046 6.5 14 5.60457 14 4.5C14 3.39543 13.1046 2.5 12 2.5C10.8954 2.5 10 3.39543 10 4.5C10 5.60457 10.8954 6.5 12 6.5Z"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"></path>
-              </svg>
+          <div className="flex w-full flex-col gap-5 md:flex-row">
+            <div className="flex w-full basis-1/3 items-start gap-5">
+              <div className="flex items-start rounded-md bg-white/10 p-3">
+                <svg
+                  className="h-12 w-12"
+                  width="24px"
+                  height="24px"
+                  strokeWidth="1.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  color="#ffffff">
+                  <path
+                    d="M18 10L15 11.5L11 8.5L10 14L13.5 17L14 21.5"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"></path>
+                  <path
+                    d="M18 8.5V10V21.5"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"></path>
+                  <path
+                    d="M10 17L8 21.5"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"></path>
+                  <path
+                    d="M8.5 8.5C7 9.5 6 12 6 12L8 13"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"></path>
+                  <path
+                    d="M12 6.5C13.1046 6.5 14 5.60457 14 4.5C14 3.39543 13.1046 2.5 12 2.5C10.8954 2.5 10 3.39543 10 4.5C10 5.60457 10.8954 6.5 12 6.5Z"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"></path>
+                </svg>
+              </div>
+              <div className="flex flex-col">
+                <h3 className="text-xl font-bold">Naturnært</h3>
+                <p className="text-balance text-sm opacity-70">
+                  Få fordelene av å bo i et naturnært område, men likevel ha
+                  kort vei til nærmeste sentrum.
+                </p>
+              </div>
             </div>
-            <div className="flex flex-col ">
-              <h3 className="text-xl font-bold">Naturnært</h3>
-              <p className="text-balance text-sm opacity-70">
-                Få fordelene av å bo i et naturnært område, men likevel ha kort
-                vei til nærmeste sentrum.
-              </p>
+            <div className="flex w-full basis-1/3 items-start gap-5">
+              <div className="flex items-start rounded-md bg-white/10 p-3">
+                <SunIcon className="h-12 w-12 text-amber-200" />
+              </div>
+              <div className="flex flex-col ">
+                <h3 className="text-xl font-bold ">Flott utsikt</h3>
+                <p className="text-balance text-sm opacity-70">
+                  Boligområdet skråner slakt oppover, noe som vil gi boligene
+                  flotte sol- og utsiktsforhold.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex w-full items-start gap-5 ">
-            <div className="flex items-start rounded-md bg-white/10 p-3">
-              <SunIcon className="h-12 w-12 text-amber-200" />
-            </div>
-            <div className="flex flex-col ">
-              <h3 className="text-xl font-bold">Flott utsikt</h3>
-              <p className="text-balance text-sm opacity-70">
-                Boligområdet skråner slakt oppover, noe som vil gi boligene
-                flotte sol- og utsiktsforhold.
-              </p>
-            </div>
-          </div>
-          <div className="flex w-full items-start gap-5 ">
-            <div className="flex items-start rounded-md bg-white/10 p-3">
-              <FaceSmileIcon className="h-12 w-12 text-green-200" />
-            </div>
-            <div className="flex flex-col ">
-              <h3 className="text-xl font-bold">Familievennlig</h3>
-              <p className="text-balance text-sm opacity-70">
-                Jåren-Råbygda barnehage ligger i gangavstand fra boligfeltet, og
-                det samme gjør et mylder av turstier. Det er også gode
-                bademuligheter i Litlslemsjøen.
-              </p>
+            <div className="flex w-full basis-1/3 items-start gap-5">
+              <div className="flex items-start rounded-md bg-white/10 p-3">
+                <FaceSmileIcon className="h-12 w-12 text-green-200" />
+              </div>
+              <div className="flex flex-col ">
+                <h3 className="text-xl font-bold">Familievennlig</h3>
+                <p className="text-balance text-sm opacity-70">
+                  Jåren-Råbygda barnehage ligger i gangavstand fra boligfeltet,
+                  og det samme gjør et mylder av turstier. Det er også gode
+                  bademuligheter i Litlslemsjøen.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+        <div className="grid max-w-7xl grid-flow-dense grid-rows-3 gap-2">
+          <Image
+            placeholder="blur"
+            priority
+            src={tiny1}
+            alt="Hegglia Boligfelt Dronebilde"
+            className="col-span-1 col-start-1 row-span-1 row-start-1 h-full rounded-md bg-cover bg-no-repeat object-cover shadow-lg"
+          />
+          <Image
+            placeholder="blur"
+            priority
+            src={tiny2}
+            alt="Hegglia Boligfelt Dronebilde"
+            className="col-span-1 col-start-2 row-span-1 row-start-1 h-full rounded-md  bg-cover bg-no-repeat object-cover shadow-lg"
+          />
+          <Image
+            placeholder="blur"
+            priority
+            src={tiny3}
+            alt="Hegglia Boligfelt Dronebilde"
+            className="col-span-1 col-start-3 row-span-1 row-start-1 h-full rounded-md  bg-cover bg-no-repeat object-cover shadow-lg"
+          />
+          <Image
+            placeholder="blur"
+            priority
+            src={tiny4}
+            alt="Hegglia Boligfelt Dronebilde"
+            className="col-span-1 col-start-1 row-span-1 row-start-2 h-full rounded-md bg-cover bg-no-repeat object-cover shadow-lg"
+          />
+          <Image
+            placeholder="blur"
+            priority
+            src={cover3}
+            alt="Hegglia Boligfelt Dronebilde"
+            className="col-span-2 col-start-2 row-span-2 row-start-2 h-full rounded-md bg-cover bg-no-repeat object-cover shadow-lg"
+          />
+          <Image
+            placeholder="blur"
+            priority
+            src={tiny5}
+            alt="Hegglia Boligfelt Dronebilde"
+            className="col-span-1 col-start-1 row-span-1 row-start-3 h-full rounded-md bg-cover bg-no-repeat object-cover shadow-lg"
+          />
+        </div>
+        <div className="flex w-full max-w-7xl items-center justify-center lg:justify-end">
+          <Link
+            href="/galleri"
+            className="flex items-center gap-5 rounded-md  bg-teal-700 px-5 py-2 text-white transition-colors hover:bg-teal-600 focus:outline-teal-500 focus:ring-teal-600">
+            <CameraIcon className="h-6 w-6" />
+            <span className=" flex items-center gap-3 text-xl font-bold">
+              Gå til galleriet <ArrowRightIcon className="h-5 w-5" />
+            </span>
+          </Link>
+        </div>
       </section>
+
       <section className="flex w-full flex-col gap-5 bg-slate-50 px-5 py-10 text-slate-800">
         <div>
           <h2 className="flex items-center gap-1.5 text-3xl font-bold">
@@ -272,9 +345,9 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
               key={house.id}
-              className="group flex flex-col rounded-md bg-white shadow-md transition-shadow hover:shadow-lg sm:flex-row sm:gap-5">
+              className="group flex flex-col rounded-md bg-white shadow-md transition-shadow hover:shadow-lg focus:shadow-[0_0_0_2px] focus:shadow-teal-600 focus:outline-none sm:flex-row sm:gap-5">
               <Image
-                className="flex max-h-56 w-full rounded-t-md object-cover sm:w-48 sm:rounded-l-md sm:rounded-t-none md:max-h-full lg:h-full lg:max-w-72"
+                className="flex max-h-56 w-full rounded-t-md object-cover sm:w-48 sm:rounded-l-md sm:rounded-tr-none md:max-h-full lg:h-full lg:max-w-72"
                 src={house.image}
                 alt={house.name}
                 width={150}
@@ -328,6 +401,13 @@ export default function Home() {
           </p>
         </div>
       </section>
+      <Image
+        placeholder="blur"
+        priority
+        src={cover2}
+        alt="Hegglia Boligfelt Dronebilde"
+        className="flex max-h-72 w-full flex-grow bg-cover bg-no-repeat object-cover shadow-lg"
+      />
       <section className="flex w-full flex-col items-center gap-8 rounded-t-lg bg-teal-900 px-5 py-10 sm:rounded-t-none">
         <div className="flex w-full max-w-lg flex-col gap-8">
           <h2 className="col-span-2 text-start text-3xl font-bold text-white">

@@ -14,10 +14,13 @@ import tomtC6 from '../../../public/byggefelt/tomt/high_tomt_6.webp';
 import tomtH6 from '../../../public/byggefelt/tomt/close_tomt_6.webp';
 import tomtC9 from '../../../public/byggefelt/tomt/high_tomt_9.webp';
 import tomtH9 from '../../../public/byggefelt/tomt/close_tomt_9.webp';
+import tomtSikt9 from '../../../public/byggefelt/tomt/c_1_25s.png';
 import tomtC10 from '../../../public/byggefelt/tomt/high_tomt_10.webp';
 import tomtH10 from '../../../public/byggefelt/tomt/close_tomt_10.webp';
+import tomtSikt10 from '../../../public/byggefelt/tomt/c_2_25s.png';
 import tomtC11 from '../../../public/byggefelt/tomt/high_tomt_11.webp';
 import tomtH11 from '../../../public/byggefelt/tomt/close_tomt_11.webp';
+import tomtSikt11 from '../../../public/byggefelt/tomt/c_3_25s.png';
 import tomtC12 from '../../../public/byggefelt/tomt/high_tomt_12.webp';
 import tomtH12 from '../../../public/byggefelt/tomt/close_tomt_12.webp';
 
@@ -151,7 +154,7 @@ export const boligfeltData: Array<TomtData> = [
     y: '510',
   },
   {
-    images: [tomtC9, tomtH9],
+    images: [tomtC9, tomtH9, tomtSikt9],
     id: 'tomt9',
     x: '45',
     y: '315',
@@ -164,7 +167,7 @@ export const boligfeltData: Array<TomtData> = [
     type: 'path',
   },
   {
-    images: [tomtC10, tomtH10],
+    images: [tomtC10, tomtH10, tomtSikt10],
     id: 'tomt10',
     x: '45',
     y: '410',
@@ -177,7 +180,7 @@ export const boligfeltData: Array<TomtData> = [
     type: 'path',
   },
   {
-    images: [tomtC11, tomtH11],
+    images: [tomtC11, tomtH11, tomtSikt11],
     id: 'tomt11',
     path: 'M49 532 L129 510 L115 477 L105 439 C53.6666667 446.333333 28 450 28 450 C28 450 35 477.333333 49 532 Z',
     name: 'Tomt 11',
@@ -190,7 +193,7 @@ export const boligfeltData: Array<TomtData> = [
     type: 'path',
   },
   {
-    images: [tomtC12, tomtH12],
+    images: [tomtC12, tomtH12, tomtSikt11],
     id: 'tomt12',
     path: 'M132 595 L126 578 C136.139543 573.776425 141.80621 570.776425 143 569 C143.962848 567.56723 143.135591 566.240865 142 565 C145.833465 559.350683 146.350208 555.063278 145 550 C140.333333 538.666667 135 525.333333 129 510 L49 532 L49 533 L83 616 L132 595 Z',
     name: 'Tomt 12',

@@ -68,11 +68,11 @@ const images: ImageDescription[] = [
 function ImageCarousel() {
   return (
     <div className="w-full">
-      <div className="flex w-full snap-x flex-row gap-5 overflow-y-auto bg-white pb-5">
+      <div className="flex w-full flex-row gap-5 overflow-y-auto bg-white pb-5">
         {images.map((img, idx) => (
           <div
             key={idx}
-            className="relative flex min-w-96 snap-start flex-col gap-1.5 sm:min-w-[500px] lg:min-w-[700px]">
+            className="relative flex min-w-80 flex-col gap-1.5 sm:min-w-[500px] lg:min-w-[700px]">
             <Image
               placeholder="blur"
               sizes={`${img.src.src} 25w, ${img.srcFull} 50w`}
