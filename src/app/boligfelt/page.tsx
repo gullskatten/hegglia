@@ -4,12 +4,15 @@ import documents from '../_data/boligfelt';
 import BoligfeltChart from './BoligfeltChart';
 import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
+import flyover from '../../../public/byggefelt/tomt/flyover_5_25s.png';
+import ImageCarousel from './ImageCarousel';
 
 export default function Boligfelt() {
   return (
-    <div className="w-full">
+    <div className="relative w-full">
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
         <div className="bg-topology-pattern absolute z-0 h-full w-full bg-repeat opacity-10" />
+
         <div className="flex min-w-72 flex-col items-center justify-center gap-3 text-center">
           <h1 className="z-10 mt-5 flex animate-fadeIn gap-5 px-3 text-4xl font-bold text-white">
             Utforsk Boligfeltet
@@ -38,23 +41,26 @@ export default function Boligfelt() {
         </div>
       </div>
 
-      <section className="flex w-full flex-col gap-5 bg-teal-900 px-5 py-10">
-        <div>
+      <section className="flex w-full flex-col gap-1.5 bg-teal-900 px-5 py-10">
+        <div className="flex w-full items-center justify-center">
           <h2 className="flex items-center gap-1.5 text-3xl font-bold">
             Prisoversikt
           </h2>
-          <p className="text-sm ">
-            Tabellen viser tomtene som er tilgjengelige for salg.
-          </p>
         </div>
         <BoligfeltTable />
       </section>
-      <section className="flex w-full flex-col gap-5 rounded-t-md bg-slate-50 px-5 py-10 text-slate-800">
+      <section className="flex w-full flex-col gap-5 bg-white px-5 py-10 text-slate-800">
+        <h2 className="flex items-center gap-1.5 text-3xl font-bold">
+          Bildegalleri
+        </h2>
+        <ImageCarousel />
+      </section>
+      <section className="flex w-full flex-col gap-5  bg-slate-300 px-5 py-10 text-slate-800">
         <div>
-          <h2 className="flex items-center gap-1.5 text-3xl font-bold">
+          <h2 className="flex items-center gap-1.5 text-3xl font-bold text-slate-800">
             Dokumenter
           </h2>
-          <p className="text-sm ">
+          <p className="text-sm text-slate-800">
             Vi har samlet relevante dokumenter for utbyggingen av Hegglia
             Boligfelt.
           </p>
@@ -67,15 +73,15 @@ export default function Boligfelt() {
               target="_blank"
               rel="noopener noreferrer"
               key={house.id}
-              className="group flex flex-col rounded-md border border-slate-200 bg-white shadow-md transition-shadow hover:shadow-lg sm:flex-row sm:gap-5">
+              className="group flex flex-col rounded-md border border-slate-300 bg-slate-200 shadow-md transition-shadow hover:shadow-lg sm:flex-row sm:gap-5">
               <Image
-                className="flex max-h-56 w-full rounded-t-md object-cover shadow-inner shadow-black brightness-75 sm:w-48 sm:rounded-l-md sm:rounded-t-none md:max-h-full lg:h-full lg:max-w-72"
+                className="flex max-h-56 w-full rounded-t-md object-cover shadow-inner shadow-slate-700 brightness-75 sm:w-48 sm:rounded-l-md sm:rounded-t-none md:max-h-full lg:h-full lg:max-w-72"
                 src={house.image}
                 alt={house.name}
                 width={150}
                 height={150}
               />
-              <div className="flex flex-grow flex-col gap-3 p-3">
+              <div className="flex flex-grow flex-col gap-3 px-3 py-5">
                 <h3 className="flex items-center gap-1.5 font-bold underline-offset-2 group-hover:underline sm:text-xl">
                   {house.name}{' '}
                 </h3>
@@ -86,13 +92,7 @@ export default function Boligfelt() {
                 </div>
                 <div className="flex flex-grow items-end justify-end ">
                   <div className="flex items-center gap-1.5 text-xs text-slate-400">
-                    Kilde:{' '}
-                    <a
-                      href="https://skaun.kommune.no"
-                      target="_blank"
-                      rel="noopener noreferrer">
-                      skaun.kommune.no
-                    </a>
+                    Kilde: <span>skaun.kommune.no</span>
                     <ArrowTopRightOnSquareIcon className="h-3 w-3" />
                   </div>
                 </div>

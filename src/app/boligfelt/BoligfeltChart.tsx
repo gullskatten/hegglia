@@ -3,10 +3,18 @@
 import React from 'react';
 import * as Popover from '@radix-ui/react-popover';
 import { boligfeltData } from '../_data/boligfelt';
-import { CursorArrowRaysIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowsPointingOutIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  CursorArrowRaysIcon,
+} from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import { InformationCircleIcon } from '@heroicons/react/16/solid';
 
 export default function BoligfeltChart() {
   const [showPopoverHint, setShowPopoverHint] = React.useState(false);
+  const [currentImageIdx, setCurrentImageIdx] = React.useState(0);
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -27,7 +35,7 @@ export default function BoligfeltChart() {
         stroke="none"
         strokeWidth="1"
         fill="none"
-        fill-rule="evenodd">
+        fillRule="evenodd">
         <path
           d="M297,0 L332,0 L346,91 L349,104 L352,115 L395,232 L424,304 L444,347 L489,438 L450,457 L382,408 L366,424 L306,496 L295.938036,509.168586 L194,629 L185,637 C173,605 162.333333,589 153,589 C143.666667,589 120.333333,598 83,616 L49,533 L28,450 L11,354 L19,229 L53,247 C73.6666667,258.333333 84.3333333,262.666667 85,260 C85.6666667,257.333333 92.6666667,224.666667 106,162 C111.972585,166 117.305918,168 122,168 C126.694082,168 131.360749,166 136,162 C158,141.333333 174,129.333333 184,126 C194,122.666667 201.333333,121.666667 206,123 L233,120 L250,115 L261,112 C250.926992,86.5158541 248.926992,66.1825208 255,51 C261.073008,35.8174792 275.073008,26.1508126 297,22 C299,16.6666667 300,12.6666667 300,10 C300,7.33333333 299,4 297,0 Z"
           id="bg"
@@ -38,7 +46,10 @@ export default function BoligfeltChart() {
           <Popover.Root
             key={tomt.id + `-${showPopoverHint}`}
             defaultOpen={i === 0 && showPopoverHint}
-            onOpenChange={() => setShowPopoverHint(false)}>
+            onOpenChange={() => {
+              setShowPopoverHint(false);
+              setCurrentImageIdx(0);
+            }}>
             <Popover.Trigger asChild>
               {tomt.type === 'polygon' ? (
                 <g>
@@ -46,7 +57,7 @@ export default function BoligfeltChart() {
                     key={tomt.id}
                     id={tomt.id}
                     stroke="#000000"
-                    className={`cursor-pointer  transition-colors hover:fill-teal-600 ${
+                    className={`cursor-pointer  transition-colors hover:fill-teal-600 focus:fill-teal-600 ${
                       !tomt.available ? 'fill-slate-300' : 'fill-white'
                     }`}
                     points={tomt.path}></polygon>
@@ -85,11 +96,63 @@ export default function BoligfeltChart() {
                   </div>
                 ) : (
                   <>
-                    {tomt.available && (
-                      <img
-                        src={tomt.image}
-                        className="h-52 rounded-t-md border-b-4 border-teal-800"
-                      />
+                    {tomt.available && tomt.images.length > 0 && (
+                      <div className="h-52 overflow-y-scroll rounded-t-md border-b-4 border-teal-800 bg-teal-950">
+                        <div className="relative flex w-full rounded-t-md">
+                          {tomt.images.length > 1 && (
+                            <div className="absolute top-3 z-10 flex w-full items-center justify-center text-white">
+                              {tomt.images.map((img, idx) => (
+                                <button
+                                  key={idx}
+                                  onClick={() => setCurrentImageIdx(idx)}
+                                  className={`mx-1 h-1.5 w-1.5 rounded-full border transition-colors focus:outline-none ${
+                                    idx === currentImageIdx
+                                      ? 'border-teal-500 bg-teal-500'
+                                      : ' border-white bg-white'
+                                  }`}></button>
+                              ))}
+                            </div>
+                          )}
+                          <button
+                            onClick={() =>
+                              setCurrentImageIdx((prev) => prev - 1)
+                            }
+                            disabled={currentImageIdx === 0}
+                            className="absolute h-full bg-gradient-to-l from-transparent to-black/50 p-3 text-xs text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none disabled:pointer-events-none disabled:opacity-35">
+                            <ChevronLeftIcon className="h-6 w-6" />
+                          </button>
+                          <Image
+                            alt={`Dronebilde av tomt nummer ${tomt.id} (bilde ${currentImageIdx + 1} av ${tomt.images.length})`}
+                            src={tomt.images[currentImageIdx].src}
+                            width={1080}
+                            height={600}
+                            className="h-52 w-full"
+                          />
+                          <div className="absolute bottom-0 left-0 w-full bg-black/50 p-1 text-xs text-white">
+                            <span className="flex items-center gap-1.5">
+                              <InformationCircleIcon className="h-3 w-3" />{' '}
+                              Illustrasjonen er ikke nøyaktige mål på tomten.
+                            </span>
+                          </div>
+                          <button
+                            disabled={
+                              currentImageIdx === tomt.images.length - 1
+                            }
+                            onClick={() =>
+                              setCurrentImageIdx((prev) => prev + 1)
+                            }
+                            className="absolute right-0 h-full bg-gradient-to-r from-transparent to-black/50 p-3 text-xs text-white focus:outline-teal-500 disabled:pointer-events-none disabled:opacity-35">
+                            <ChevronRightIcon className="h-6 w-6" />
+                          </button>
+                          <a
+                            title={`Åpne bilde ${currentImageIdx + 1} i full størrelse`}
+                            href={tomt.images[currentImageIdx].src}
+                            target="_blank"
+                            className="absolute bottom-0 right-0 bg-teal-800 p-1 focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
+                            <ArrowsPointingOutIcon className="h-4 w-4 text-white" />
+                          </a>
+                        </div>
+                      </div>
                     )}
                     <dl className="flex flex-col gap-3 p-3">
                       <div className="flex flex-col gap-1.5">
@@ -136,7 +199,7 @@ export default function BoligfeltChart() {
         <polygon
           id="lekeplass"
           stroke="#000000"
-          fill-opacity="0.252649694"
+          fillOpacity="0.252649694"
           className="cursor-pointer fill-teal-200 transition-colors hover:fill-teal-600"
           points="166 563 261 534 290 499 296 509 194 629"></polygon>
         <path
@@ -148,10 +211,10 @@ export default function BoligfeltChart() {
           <text
             x="250"
             y="-155"
-            dominant-baseline="central"
+            dominantBaseline="central"
             transform="rotate(75, 150, 50)"
             className="fill-white text-xs"
-            text-anchor="middle">
+            textAnchor="middle">
             Melbyvegen, 7357 Skaun
           </text>
         </g>
