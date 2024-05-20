@@ -102,17 +102,19 @@ export default function BoligfeltChart() {
                       <div className="overflow-y-scroll rounded-t-md border-b-4 border-teal-800 bg-teal-950">
                         <div className="relative flex w-full rounded-t-md">
                           {tomt.images.length > 1 && (
-                            <div className="absolute top-3 z-10 flex w-full items-center justify-center text-white">
-                              {tomt.images.map((img, idx) => (
-                                <button
-                                  key={idx}
-                                  onClick={() => setCurrentImageIdx(idx)}
-                                  className={`mx-1 h-1.5 w-1.5 rounded-full border transition-colors focus:outline-none ${
-                                    idx === currentImageIdx
-                                      ? 'border-teal-500 bg-teal-500'
-                                      : ' border-white bg-white'
-                                  }`}></button>
-                              ))}
+                            <div className="absolute bottom-1 z-10 flex w-full items-center justify-center  text-white">
+                              <div className="flex items-center justify-center rounded-full bg-black/40 p-1 ">
+                                {tomt.images.map((_, idx) => (
+                                  <button
+                                    key={idx}
+                                    onClick={() => setCurrentImageIdx(idx)}
+                                    className={`mx-1 h-1.5 w-1.5 rounded-full border transition-colors focus:outline-none ${
+                                      idx === currentImageIdx
+                                        ? 'border-teal-500 bg-teal-500'
+                                        : ' border-white bg-white'
+                                    }`}></button>
+                                ))}
+                              </div>
                             </div>
                           )}
                           <button
@@ -131,18 +133,12 @@ export default function BoligfeltChart() {
                             height={600}
                             className="max-h-[250px] min-h-[250px] w-full rounded-t-md bg-cover bg-center bg-no-repeat object-cover"
                           />
-                          <div className="absolute bottom-0 left-0 w-full bg-black/50 p-1 text-xs text-white">
-                            <span className="flex items-center gap-1.5">
-                              <InformationCircleIcon className="h-3 w-3" />{' '}
-                              Illustrasjoner er ikke nøyaktige mål på tomten.
-                            </span>
-                          </div>
+
                           <button
                             disabled={
                               currentImageIdx === tomt.images.length - 1
                             }
                             onClick={() => {
-                              console.log(tomt.images[currentImageIdx]);
                               setCurrentImageIdx(currentImageIdx + 1);
                             }}
                             className="absolute right-0 h-full p-3 text-xs text-white focus:text-teal-300 focus:outline-none disabled:pointer-events-none disabled:opacity-35">
@@ -188,9 +184,15 @@ export default function BoligfeltChart() {
                           )}
                         </dd>
                       </div>
-                      <dd className=" max-w-[330px] text-pretty text-sm text-black">
+                      <dd className="max-w-[330px] text-pretty text-sm text-black">
                         {tomt.description}
                       </dd>
+                      <span className="p-1 text-xs text-slate-400">
+                        <span className="flex items-center gap-1.5">
+                          <InformationCircleIcon className="h-3 w-3" />{' '}
+                          Illustrasjonene er ikke nøyaktige mål på tomten.
+                        </span>
+                      </span>
                     </dl>
                   </>
                 )}
