@@ -22,7 +22,7 @@ function Footer() {
             <span className="text-amber-100">Tlf. 90 95 95 95</span>
           </a>
           <p className="text-center text-white">
-            Hegglia Boligfelt AS
+            Hegglia Boligfelt AS (Org.nr, 929604954)
             <br />
             Melbyvegen, 7357 Skaun
           </p>

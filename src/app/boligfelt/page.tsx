@@ -4,7 +4,6 @@ import documents from '../_data/boligfelt';
 import BoligfeltChart from './BoligfeltChart';
 import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
-import flyover from '../../../public/byggefelt/tomt/flyover_5_25s.png';
 import ImageCarousel from './ImageCarousel';
 
 export default function Boligfelt() {
