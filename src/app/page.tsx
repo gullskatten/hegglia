@@ -339,7 +339,7 @@ export default function Home() {
             className="flex items-center gap-5 rounded-md  bg-teal-700 px-5 py-2 text-white transition-colors hover:bg-teal-600 focus:outline-teal-500 focus:ring-teal-600">
             <CameraIcon className="h-6 w-6" />
             <span className=" flex items-center gap-3 text-xl font-bold">
-              Gå til galleriet <ArrowRightIcon className="h-5 w-5" />
+              Gå til bildegalleriet <ArrowRightIcon className="h-5 w-5" />
             </span>
           </Link>
         </div>

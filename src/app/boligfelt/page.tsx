@@ -4,7 +4,7 @@ import documents from '../_data/boligfelt';
 import BoligfeltChart from './BoligfeltChart';
 import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
-import ImageCarousel from './ImageCarousel';
+import cover from '../../../public/byggefelt/tomt/flyover_cover_1_50s.png';
 
 export default function Boligfelt() {
   return (
@@ -48,13 +48,14 @@ export default function Boligfelt() {
         </div>
         <BoligfeltTable />
       </section>
-      <section className="flex w-full flex-col gap-5 bg-white px-5 py-10 text-slate-800">
-        <h2 className="flex items-center gap-1.5 text-3xl font-bold">
-          Bildegalleri
-        </h2>
-        <ImageCarousel />
-      </section>
-      <section className="flex w-full flex-col gap-5  bg-slate-300 px-5 py-10 text-slate-800">
+      <Image
+        placeholder="blur"
+        priority
+        src={cover}
+        alt="Hegglia Boligfelt Dronebilde"
+        className="flex max-h-72 w-full flex-grow bg-cover bg-no-repeat object-cover"
+      />
+      <section className="flex w-full flex-col gap-5  bg-slate-50 px-5 py-10 text-slate-800">
         <div>
           <h2 className="flex items-center gap-1.5 text-3xl font-bold text-slate-800">
             Dokumenter
@@ -73,7 +74,7 @@ export default function Boligfelt() {
               target="_blank"
               rel="noopener noreferrer"
               key={house.id}
-              className="group flex flex-col rounded-md border border-slate-300 bg-slate-200 shadow-md transition-shadow hover:shadow-lg sm:flex-row sm:gap-5">
+              className="group flex flex-col rounded-md border border-slate-300 bg-white shadow-md transition-shadow hover:shadow-lg focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none sm:flex-row sm:gap-5">
               <Image
                 className="flex max-h-56 w-full rounded-t-md object-cover shadow-inner shadow-slate-700 brightness-75 sm:w-48 sm:rounded-l-md sm:rounded-t-none md:max-h-full lg:h-full lg:max-w-72"
                 src={house.image}

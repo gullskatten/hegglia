@@ -25,7 +25,7 @@ type ImageDescription = {
   srcFull?: StaticImageData['src'];
 };
 
-const images: ImageDescription[] = [
+export const images: ImageDescription[] = [
   {
     src: img8,
     srcFull: img8Full.src,
