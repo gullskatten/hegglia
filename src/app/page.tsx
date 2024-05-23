@@ -58,11 +58,11 @@ export default function Home() {
             <h1 className="flex animate-fadeIn gap-5 px-3 text-6xl font-bold text-white md:text-8xl">
               Hegglia Boligfelt
             </h1>
-            <p className="mt-3 flex items-center gap-1.5 opacity-80">
-              <MapPinIcon className="h-4 w-4" /> Kråksetdalen 20, 7357 Skaun
+            <p className="mt-3 flex items-center gap-1.5 rounded-md bg-black/40 px-3 py-1 opacity-95">
+              <MapPinIcon className="h-4 w-4 text-red-400" /> Kråksetdalen 20,
+              7357 Skaun
             </p>
           </div>
-
           <h3
             className={`${merriweather.className} text-pretty px-3 text-center text-lg sm:max-w-[500px]`}>
             Begynn din boligdrøm med nærhet til en fantastisk natur.
@@ -85,7 +85,9 @@ export default function Home() {
             <div className="flex w-full gap-5 sm:gap-3">
               <HomeModernIcon className="h-12 w-12 text-teal-100" />
               <div className="flex flex-col  sm:text-start ">
-                <h3 className="text-xl font-bold">10 ledige tomter</h3>
+                <h3 className="text-xl font-bold">
+                  10 ledige tomter<span className="text-teal-500">*</span>
+                </h3>
                 <p className="text-sm opacity-70">Tomter fra 800-1300 m²</p>
               </div>
             </div>
@@ -193,6 +195,19 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+      <section>
+        <h4
+          className={`${merriweather.className} text-pretty pb-3 text-center text-xs opacity-70 sm:text-sm`}>
+          <span className="text-teal-500">*</span> Boligtomtene har ingen
+          byggeklausul utover{' '}
+          <Link
+            href={'/boligfelt#reguleringsbestemmelser'}
+            className="underline underline-offset-2">
+            reguleringsbestemmelsen
+          </Link>
+          .
+        </h4>
       </section>
 
       <section className="flex w-full flex-col items-center gap-8 rounded-t-lg bg-teal-900 px-5 py-10 sm:rounded-t-none">

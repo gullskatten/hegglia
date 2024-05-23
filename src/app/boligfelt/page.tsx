@@ -67,6 +67,7 @@ export default function Boligfelt() {
         <div className="grid gap-3 lg:grid-cols-2">
           {documents.map((house) => (
             <a
+              id={house.anchor}
               title={`Lenke til ${house.name} `}
               href={house.url}
               target="_blank"

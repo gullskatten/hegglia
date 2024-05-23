@@ -27,6 +27,7 @@ import tomtH12 from '../../../public/byggefelt/tomt/close_tomt_12.webp';
 interface DocumentsData {
   url: string;
   name: string;
+  anchor: string;
   image: string;
   id: number;
   description: string;
@@ -211,6 +212,7 @@ export const boligfeltData: Array<TomtData> = [
 const documents: DocumentsData[] = [
   {
     id: 0,
+    anchor: 'plantegning',
     url: 'https://www.skaun.kommune.no/getfile.php/5243504.1720.ppjln7aiiib7as/Plankart+021120.pdf',
     name: 'Plantegning for Hegglia Boligfelt',
     image: '/byggefelt/plantegning.png',
@@ -219,6 +221,7 @@ const documents: DocumentsData[] = [
   },
   {
     id: 1,
+    anchor: 'reguleringsbestemmelser',
     url: 'https://www.skaun.kommune.no/getfile.php/5243503.1720.mtbtjnapltpbnq/Reguleringsbestemmelser+071123.pdf',
     name: 'Reguleringsbestemmelser',
     image: '/byggefelt/reguleringsbestemmelser.png',
@@ -227,6 +230,7 @@ const documents: DocumentsData[] = [
   },
   {
     id: 2,
+    anchor: 'reguleringsplan',
     url: 'https://www.skaun.kommune.no/getfile.php/5243508.1720.ibzlajlzjlz7ib/Planbeskrivelse%5B3%5D.pdf',
     name: 'Reguleringsplan',
     image: '/byggefelt/reguleringsplan.png',
@@ -235,6 +239,7 @@ const documents: DocumentsData[] = [
   },
   {
     id: 3,
+    anchor: 'ros-analyse',
     url: 'https://www.skaun.kommune.no/getfile.php/5243505.1720.wzpnkqqljibitn/201303+ROS-analyse+Hegglia+boligfelt.pdf',
     name: 'Risiko- og sårbarhetsanalyse',
     image: '/byggefelt/risiko-sarbarhetsanalyse.png',
@@ -243,6 +248,7 @@ const documents: DocumentsData[] = [
   },
   {
     id: 4,
+    anchor: 'kunngjoring',
     url: 'https://www.skaun.kommune.no/kunngjoering-av-vedtatt-reguleringsplan-for-nytt-boligfelt-hegglia-gnrbnr-851.6635846-492713.html',
     name: 'Sak 65/2023 - Kunngjøring fra Skaun Kommune',
     image: '/byggefelt/artikkel-skaun-kommune.png',
