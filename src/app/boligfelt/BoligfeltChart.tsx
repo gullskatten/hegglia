@@ -169,30 +169,32 @@ export default function BoligfeltChart() {
                           )}
                         </div>
                         <dd className="flex items-center gap-3 text-sm font-semibold text-black">
-                          {tomt.available && (
-                            <>
-                              <span>{tomt.kvm} m²</span>{' '}
-                              <span className="text-teal-800">
-                                {Intl.NumberFormat('nb', {
-                                  currency: 'NOK',
-                                  unitDisplay: 'long',
-                                  style: 'currency',
-                                  maximumFractionDigits: 0,
-                                }).format(tomt.price)}
-                              </span>
-                            </>
+                          <span>{tomt.kvm} m²</span>{' '}
+                          {tomt.available ? (
+                            <span className="text-teal-800">
+                              {Intl.NumberFormat('nb', {
+                                currency: 'NOK',
+                                unitDisplay: 'long',
+                                style: 'currency',
+                                maximumFractionDigits: 0,
+                              }).format(tomt.price)}
+                            </span>
+                          ) : (
+                            <span className="text-teal-800">Solgt</span>
                           )}
                         </dd>
                       </div>
                       <dd className="max-w-[330px] text-pretty text-sm text-black">
                         {tomt.description}
                       </dd>
-                      <span className="p-1 text-xs text-slate-400">
-                        <span className="flex items-center gap-1.5">
-                          <InformationCircleIcon className="h-3 w-3" />{' '}
-                          Illustrasjonene er ikke nøyaktige mål på tomten.
+                      {tomt.available && (
+                        <span className="p-1 text-xs text-slate-400">
+                          <span className="flex items-center gap-1.5">
+                            <InformationCircleIcon className="h-3 w-3" />{' '}
+                            Illustrasjonene er ikke nøyaktige mål på tomten.
+                          </span>
                         </span>
-                      </span>
+                      )}
                     </dl>
                   </>
                 )}
