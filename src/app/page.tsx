@@ -24,6 +24,7 @@ import tiny3 from '../../public/byggefelt/tomt/flyover_3_25s.png';
 import tiny4 from '../../public/byggefelt/tomt/flyover_5_25s.png';
 import tiny5 from '../../public/byggefelt/tomt/flyover_8_25s.png';
 import eokBrand from '../../public/byggefelt/eok.jpg';
+import eokWorkers from '../../public/byggefelt/eok-workers.jpg';
 
 const merriweather = Merriweather({ weight: '700', subsets: ['latin'] });
 
@@ -402,25 +403,41 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="flex w-full flex-col gap-5 bg-white px-5 py-10 text-slate-800">
-        <div className="flex flex-col items-center gap-10 text-center">
-          <h2 className="flex items-center gap-1.5 text-pretty text-3xl font-bold">
-            <span>
-              Ønsker du hjelp med alt fra{' '}
-              <span className="text-teal-600">planlegging</span>,{' '}
-              <span className="text-teal-600">byggesak</span> eller selve
-              byggeprosessen? <span className="text-red-600">EOK Bygg AS</span>{' '}
-              bistå med dette.
-            </span>
-          </h2>
-          <a
-            href={`mailto:post@eokbygg.com`}
-            className={`text-medium rounded-md border-2 border-teal-800 bg-white px-3 py-1.5 font-bold text-teal-800  shadow-slate-100 transition-colors hover:border-teal-500 hover:text-teal-700 focus:shadow-[0_0_0_2px] focus:shadow-teal-500 focus:outline-none`}>
-            Kontakt oss på post@eokbygg.com
-          </a>
+      <section className="grid w-full grid-flow-col-dense items-center gap-0 bg-white ">
+        <div className="hidden h-96 bg-white sm:flex sm:w-60 md:w-80">
+          <Image
+            className="flex h-full w-full object-cover object-top"
+            src={eokWorkers}
+            height={345}
+            width={600}
+            alt="EOK Bygg står klare til å hjelpe deg med alt fra planlegging til selve byggeprosessen"
+          />
         </div>
-        <div className="flex w-full justify-end">
-          <Image src={eokBrand} alt="EOK Bygg AS Logo" className="w-24" />
+
+        <div className="flex flex-col gap-10 bg-white px-5 py-10 text-slate-800">
+          <div className="flex flex-col items-center gap-10">
+            <div className="flex items-center text-center">
+              <h3 className="flex max-w-[950px] items-center gap-1.5 text-pretty text-2xl font-bold">
+                <span>
+                  Ønsker du hjelp med alt fra{' '}
+                  <span className="text-teal-600">planlegging</span>,{' '}
+                  <span className="text-teal-600">byggesak</span> eller selve
+                  byggeprosessen?{' '}
+                  <span className="text-red-600">EOK Bygg AS</span> kan bistå
+                  med dette.
+                </span>
+              </h3>
+            </div>
+
+            <a
+              href={`mailto:post@eokbygg.com`}
+              className={`text-medium rounded-md border-2 border-teal-800 bg-white px-3 py-1.5 font-bold text-teal-800  shadow-slate-100 transition-colors hover:border-teal-500 hover:text-teal-700 focus:shadow-[0_0_0_2px] focus:shadow-teal-500 focus:outline-none`}>
+              Kontakt oss på post@eokbygg.com
+            </a>
+          </div>
+          <div className="flex w-full justify-end">
+            <Image src={eokBrand} alt="EOK Bygg AS Logo" className="w-24" />
+          </div>
         </div>
       </section>
       <Image
