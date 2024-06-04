@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Bildegalleri | Hegglia Boligfelt',
   description: 'Se bilder fra boligfeltet og det planlagte utbyggingsarbeidet.',
   openGraph: {
-    url: 'https://heggliaboligfelt.no/bilder',
+    url: 'https://heggliaboligfelt.no/galleri',
     title: 'Bildegalleri | Hegglia Boligfelt',
     description:
       'Se bilder fra boligfeltet og det planlagte utbyggingsarbeidet.',
