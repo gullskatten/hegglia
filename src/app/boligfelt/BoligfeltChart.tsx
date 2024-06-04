@@ -30,7 +30,12 @@ export default function BoligfeltChart() {
       viewBox="0 0 493 645"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink">
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      aria-labelledby="boligfelt-chart-title">
+      <title id="boligfelt-chart-title">
+        Dette er en illustrasjon av Hegglia Boligfelt. Klikk på tomtene for mer
+        informasjon.
+      </title>
       <g
         id="tomter"
         className="fill-teal-600"
@@ -154,15 +159,15 @@ export default function BoligfeltChart() {
                         </div>
                       </div>
                     )}
-                    <dl className="flex flex-col gap-3 p-3">
-                      <div className="flex flex-col gap-1.5">
+                    <dl className="flex flex-col gap-1 p-3 sm:gap-3">
+                      <div className="flex flex-col gap-1">
                         <div className="flex w-full items-center justify-between gap-1.5">
                           <dt className="text-xl font-bold text-black">
                             {tomt.name}
                           </dt>
                           {tomt.available && (
                             <a
-                              href={`mailto:kontakt@eokbygg.com?subject=Interesse%20for%20${tomt.name}&body=Hei!%0A%0AJeg%20er%20interessert%20i%20%C3%A5%20h%C3%B8re%20mer%20om%20${tomt.name}.%20%0A%0AMvh%2C%0A`}
+                              href={`mailto:kontakt@heggliaboligfelt.no?subject=Interesse%20for%20${tomt.name}&body=Hei!%0A%0AJeg%20er%20interessert%20i%20%C3%A5%20h%C3%B8re%20mer%20om%20${tomt.name}.%20%0A%0AMvh%2C%0A`}
                               className={`rounded-sm bg-teal-800 px-3 py-1.5 text-xs font-normal text-white hover:bg-teal-700 focus:shadow-[0_0_0_2px] focus:shadow-teal-700 focus:outline-none`}>
                               Meld interesse
                             </a>
@@ -187,6 +192,12 @@ export default function BoligfeltChart() {
                       <dd className="max-w-[330px] text-pretty text-sm text-black">
                         {tomt.description}
                       </dd>
+                      {tomt.available && (
+                        <dd className="max-w-[330px] text-pretty text-xs text-teal-800">
+                          Alle tomtene selges med vann/avløp, strømtilførsel og
+                          fiber inkludert.
+                        </dd>
+                      )}
                       {tomt.available && (
                         <span className="p-1 text-xs text-slate-400">
                           <span className="flex items-center gap-1.5">

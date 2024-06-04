@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://heggliaboligfelt.no
+
+# Sitemaps
+Sitemap: https://heggliaboligfelt.no/sitemap.xml

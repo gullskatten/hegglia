@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-import ImageCarousel, { images } from '../boligfelt/ImageCarousel';
+import { images } from '../boligfelt/ImageCarousel';
 import { ArrowsPointingOutIcon } from '@heroicons/react/20/solid';
 
 export default function Boligfelt() {
   return (
     <div className="relative w-full">
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
-        <div className="bg-topology-pattern absolute z-0 h-full w-full bg-repeat opacity-10" />
+        <div className="absolute z-0 h-full w-full bg-topology-pattern bg-repeat opacity-10" />
         <div className="flex min-w-72 flex-col items-center justify-center gap-3 text-center">
           <h1 className="z-10 my-5 flex animate-fadeIn gap-5 px-3 text-4xl font-bold text-white">
             Bildegalleri

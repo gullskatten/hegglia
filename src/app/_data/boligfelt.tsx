@@ -53,7 +53,8 @@ export const boligfeltData: Array<TomtData> = [
     id: 'tomt1',
     path: 'M249,298 C247.762584,299.425718 250.716279,299.531631 251,302 C224,312 239,333 259,385 C275,378.333333 301,367.666667 337,353 L297,249 C290.333333,269 274.333333,285.333333 249,298 Z',
     name: 'Tomt 1',
-    description: 'Tomt 1 er en stor tomt med utsikt over dalen.',
+    description:
+      'Denne tomten ligger nederst i boligfeltet og er blant de største tomtene i boligfeltet. Dette gir god plass til en stor bolig og hage.',
     kvm: 1300,
     price: 700000,
     type: 'path',
@@ -67,7 +68,7 @@ export const boligfeltData: Array<TomtData> = [
     path: 'M337,353 L366,424 L306,496 C291.333333,470.666667 289.666667,456 301,452 C300.772376,450.439153 300.10571,449.10582 299,448 L313,442 L307,428 C301.938777,431.066326 297.272111,432.732993 293,433 C291.408166,433.09949 293,431 291,429 C282.869742,430.161465 278.910903,429.413356 273,418 C268.73255,409.759985 261.934871,391.708276 259,385 C273,379 299,368.333333 337,353 Z',
     name: 'Tomt 2',
     description:
-      'Tomt 2 ligger nederst i boligfeltet og har utsikt til Laugen. Tomten er den største på boligfeltet og passer perfekt for en større bolig.',
+      'Denne tomten ligger nederst og innerst i boligfeltet. Sammen med tomt 1 er den blant de største tomtene i boligfeltet. Her er det gode muligheter for både stor hage og en større bolig!',
     kvm: 1300,
     price: 700000,
     type: 'path',
@@ -80,7 +81,8 @@ export const boligfeltData: Array<TomtData> = [
     id: 'tomt3',
     path: 'M162,301 L172,374 L177,390 L238,372 C227.333333,342.666667 221,325.666667 219,321 C216,314 211,308 194,307 C184.666667,306.333333 174,304.333333 162,301 Z',
     name: 'Tomt 3',
-    description: 'Tomt 3 er en stor tomt med utsikt over dalen.',
+    description:
+      'Tomten ligger lett ankommelig i svingen inn mot den nederste delen av boligfeltet. Tomten skråner svakt oppover, noe som gir gode muligheter for en bolig med utsikt over dalen.',
     kvm: 800,
     price: 450000,
     type: 'path',
@@ -93,7 +95,8 @@ export const boligfeltData: Array<TomtData> = [
     id: 'tomt4',
     path: '238 372 177 390 204 468 268 444',
     name: 'Tomt 4',
-    description: 'Tomt 4 er en stor tomt med utsikt over dalen.',
+    description:
+      'Denne tomten er plassert i midten av boligfeltet. En stor tomt som skråner svakt oppover gir gode utsiktmuligheter og plass til en stor bolig.',
     kvm: 900,
     price: 550000,
     available: true,
@@ -106,7 +109,8 @@ export const boligfeltData: Array<TomtData> = [
     id: 'tomt5',
     path: '204 468 268 444 290 499 261 534 234 543',
     name: 'Tomt 5',
-    description: 'Tomt 5 er en stor tomt med utsikt over dalen.',
+    description:
+      'Denne flotte tomten har en flott beliggenhet innerst i veien. I likhet med tomt 3 og 4 skråner tomten svak som gir gode utsiktsforhold. Dette er en stor tomt med mange muligheter!',
     kvm: 900,
     price: 500000,
     type: 'polygon',
@@ -120,7 +124,7 @@ export const boligfeltData: Array<TomtData> = [
     path: 'M162 301 C148 297 137 294 129 292 C90 285 101 360 104 381 C121 380 172 374 172 374 C172 374 168.666667 349.666667 162 301 Z',
     name: 'Tomt 6',
     description:
-      'Tomt 6 ligger praktisk til i svingen inn til den øverste delen av boligfeltet.',
+      'Denne tomten ligger praktisk til i svingen inn til den øverste delen av boligfeltet. Her er det gode muligheter for en stor bolig med utsikt over dalen.',
     kvm: 900,
     price: 400000,
     type: 'path',
@@ -161,7 +165,8 @@ export const boligfeltData: Array<TomtData> = [
     y: '315',
     path: 'M86 356 C76 355.333333 51 354.666667 11 354 L18 245 L78 274 C77.1969522 275.935427 76.8636189 277.602094 77 279 C105 290 81 308 86 356 Z',
     name: 'Tomt 9',
-    description: 'Tomt 9 er en stor tomt med utsikt over dalen.',
+    description:
+      'Dette er den ytterste av tomtente øverst i boligfeltet. Tomten har en flott beliggenhet med utsikt over dalen, og er en av de største tomtene i feltet.',
     kvm: 1200,
     price: 550000,
     available: true,
@@ -174,7 +179,8 @@ export const boligfeltData: Array<TomtData> = [
     y: '410',
     path: 'M11 354 C47 354.666667 72 355.333333 86 356 C87.3333333 374.666667 93.6666667 402.333333 105 439 L28 450 L11 354 Z',
     name: 'Tomt 10',
-    description: 'Tomt 10 er en stor tomt plassert øverst i boligfeltet.',
+    description:
+      'I likhet med tomt 9 er denne tomten blant de største i boligfeltet. Med god plass til en stor bolig og hage, er dette en flott tomt for deg som ønsker god plass og flott utsikt.',
     kvm: 1200,
     price: 600000,
     available: true,
@@ -185,7 +191,8 @@ export const boligfeltData: Array<TomtData> = [
     id: 'tomt11',
     path: 'M49 532 L129 510 L115 477 L105 439 C53.6666667 446.333333 28 450 28 450 C28 450 35 477.333333 49 532 Z',
     name: 'Tomt 11',
-    description: 'Tomt 11 er en stor tomt plassert øverst i boligfeltet.',
+    description:
+      'Denne tomten ligger flott til øverst i boligfeltet. Her får du en stor tomt med flott utsikt over dalen.',
     kvm: 1100,
     x: '65',
     y: '490',
@@ -199,7 +206,7 @@ export const boligfeltData: Array<TomtData> = [
     path: 'M132 595 L126 578 C136.139543 573.776425 141.80621 570.776425 143 569 C143.962848 567.56723 143.135591 566.240865 142 565 C145.833465 559.350683 146.350208 555.063278 145 550 C140.333333 538.666667 135 525.333333 129 510 L49 532 L49 533 L83 616 L132 595 Z',
     name: 'Tomt 12',
     description:
-      'Tomt 12 er en stor tomt plassert øverst og innerst i boligfeltet.',
+      'Denne store tomten er plassert øverst og innerst i boligfeltet. Her er det gode muligheter for en stor bolig med flott utsikt over dalen.',
     kvm: 1100,
     x: '90',
     y: '560',

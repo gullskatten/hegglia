@@ -18,23 +18,13 @@ function Footer() {
             className="flex items-center justify-center">
             <span className="text-amber-100">kontakt@heggliaboligfelt.no</span>
           </a>
-          <a href="tel:90959595" className="flex items-center justify-center">
-            <span className="text-amber-100">Tlf. 90 95 95 95</span>
-          </a>
           <p className="text-center text-white">
-            Hegglia Boligfelt AS (Org.nr, 929604954)
+            Hegglia Boligfelt AS - Org.nr 929604954
             <br />
             Melbyvegen, 7357 Skaun
           </p>
         </div>
       </section>
-      <div className="flex items-center justify-center gap-5 p-5">
-        <Link
-          href="/"
-          className="text-xs font-medium underline underline-offset-2 sm:text-sm">
-          Personvernerklæring
-        </Link>
-      </div>
     </div>
   );
 }
