@@ -37,7 +37,6 @@ export const metadata: Metadata = {
 function addOrganizationJsonLd() {
   return {
     __html: `{
-       {
       "@context": "https://schema.org",
       "@type": "Organization",
       "legalName": "Hegglia Boligfelt AS",
@@ -54,7 +53,6 @@ function addOrganizationJsonLd() {
         "postalCode": "7357"
       }
     }
-  }
   `,
   };
 }
