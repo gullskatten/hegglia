@@ -54,6 +54,7 @@ function addOrganizationJsonLd() {
         "postalCode": "7357"
       }
     }
+  }
   `,
   };
 }
