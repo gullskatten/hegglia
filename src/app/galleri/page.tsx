@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { images } from '../boligfelt/ImageCarousel';
+import { images } from '../utforsk/ImageCarousel';
 import { ArrowsPointingOutIcon } from '@heroicons/react/20/solid';
 
 export default function Boligfelt() {

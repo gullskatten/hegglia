@@ -18,11 +18,9 @@ export const metadata: Metadata = {
     countryName: 'Norge',
     determiner: 'auto',
     emails: ['kontakt@heggliaboligfelt.no'],
-
     type: 'website',
   },
   twitter: {
-    site: '@hegglia',
     card: 'summary_large_image',
     title: 'Hegglia Boligfelt',
     description:

@@ -11,6 +11,7 @@ import {
 } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import { InformationCircleIcon } from '@heroicons/react/16/solid';
+import Link from 'next/link';
 
 export default function BoligfeltChart() {
   const [showPopoverHint, setShowPopoverHint] = React.useState(false);
@@ -159,12 +160,14 @@ export default function BoligfeltChart() {
                         </div>
                       </div>
                     )}
-                    <dl className="flex flex-col gap-1 p-3 sm:gap-3">
+                    <div className="flex flex-col gap-1 p-3 sm:gap-3">
                       <div className="flex flex-col gap-1">
                         <div className="flex w-full items-center justify-between gap-1.5">
-                          <dt className="text-xl font-bold text-black">
+                          <Link
+                            href={`/tomter/${tomt.id}`}
+                            className="text-xl font-bold text-black underline underline-offset-2">
                             {tomt.name}
-                          </dt>
+                          </Link>
                           {tomt.available && (
                             <a
                               href={`mailto:kontakt@heggliaboligfelt.no?subject=Interesse%20for%20${tomt.name}&body=Hei!%0A%0AJeg%20er%20interessert%20i%20%C3%A5%20h%C3%B8re%20mer%20om%20${tomt.name}.%20%0A%0AMvh%2C%0A`}
@@ -173,7 +176,7 @@ export default function BoligfeltChart() {
                             </a>
                           )}
                         </div>
-                        <dd className="flex items-center gap-3 text-sm font-semibold text-black">
+                        <div className="flex items-center gap-3 text-sm font-semibold text-black">
                           <span>{tomt.kvm} m²</span>{' '}
                           {tomt.available ? (
                             <span className="text-teal-800">
@@ -187,11 +190,11 @@ export default function BoligfeltChart() {
                           ) : (
                             <span className="text-teal-800">Solgt</span>
                           )}
-                        </dd>
+                        </div>
                       </div>
-                      <dd className="max-w-[330px] text-pretty text-sm text-black">
+                      <div className="max-w-[330px] text-pretty text-sm text-black">
                         {tomt.description}
-                      </dd>
+                      </div>
                       {tomt.available && (
                         <dd className="max-w-[330px] text-pretty text-xs text-teal-800">
                           Alle tomtene selges med vann/avløp, strømtilførsel og
@@ -206,7 +209,7 @@ export default function BoligfeltChart() {
                           </span>
                         </span>
                       )}
-                    </dl>
+                    </div>
                   </>
                 )}
 

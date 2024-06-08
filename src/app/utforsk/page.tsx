@@ -5,12 +5,14 @@ import BoligfeltChart from './BoligfeltChart';
 import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
 import cover from '../../../public/byggefelt/tomt/flyover_cover_1_50s.png';
+import Link from 'next/link';
+import { ArrowRightIcon, ListBulletIcon } from '@heroicons/react/24/outline';
 
 export default function Boligfelt() {
   return (
     <div className="relative w-full">
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
-        <div className="bg-topology-pattern absolute z-0 h-full w-full bg-repeat opacity-10" />
+        <div className="absolute z-0 h-full w-full bg-topology-pattern bg-repeat opacity-10" />
 
         <div className="flex min-w-72 flex-col items-center justify-center gap-3 text-center">
           <h1 className="z-10 mt-5 flex animate-fadeIn gap-5 px-3 text-4xl font-bold text-white">
@@ -23,7 +25,7 @@ export default function Boligfelt() {
             <span className="text-sm font-semibold">Retning Nordover</span>
           </div>
         </div>
-        <div className="animate-float relative z-[1] flex place-items-center pb-5">
+        <div className="relative z-[1] flex animate-float place-items-center pb-5">
           <BoligfeltChart />
         </div>
 
@@ -47,6 +49,16 @@ export default function Boligfelt() {
           </h2>
         </div>
         <BoligfeltTable />
+        <div className="mt-3 flex w-full items-center justify-center">
+          <Link
+            href="/tomter"
+            className="flex items-center gap-5 rounded-md  bg-teal-700 px-5 py-2 text-white transition-colors hover:bg-teal-600 focus:outline-teal-500 focus:ring-teal-600">
+            <ListBulletIcon className="h-6 w-6" />
+            <span className=" flex items-center gap-3 text-xl font-bold">
+              Informasjon om tomtene <ArrowRightIcon className="h-5 w-5" />
+            </span>
+          </Link>
+        </div>
       </section>
       <Image
         placeholder="blur"

@@ -70,7 +70,7 @@ export default function Home() {
         </div>
         <div className="translate-y-[50%]">
           <Link
-            href="/boligfelt"
+            href="/utforsk"
             className="flex items-center gap-5 rounded-md  bg-teal-700 px-5 py-2 text-white transition-colors hover:bg-teal-600 focus:outline-teal-500 focus:ring-teal-600">
             <MapIcon className="h-6 w-6" />
             <span className=" flex items-center gap-3 text-xl font-bold">
@@ -202,7 +202,7 @@ export default function Home() {
           <span className="text-teal-500">*</span> Boligtomtene har ingen
           byggeklausul utover{' '}
           <Link
-            href={'/boligfelt#reguleringsbestemmelser'}
+            href={'/utforsk#reguleringsbestemmelser'}
             className="underline underline-offset-2">
             reguleringsbestemmelsen
           </Link>

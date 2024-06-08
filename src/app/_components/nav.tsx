@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 function Nav() {
   return (
-    <header className="sticky top-0 flex w-full items-center justify-between bg-teal-950 px-5 py-3">
+    <header className="flex w-full items-center justify-between bg-teal-950 px-5 py-3">
       <div className="flex items-center justify-start gap-5">
         <div>
           <Link

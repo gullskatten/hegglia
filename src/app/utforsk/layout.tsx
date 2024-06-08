@@ -9,8 +9,17 @@ export const metadata: Metadata = {
   title: 'Utforsk Boligfeltet | Hegglia Boligfelt',
   description:
     'Få mer informasjon om tomtene på boligfeltet og det planlagte utbyggingsarbeidet.',
+  keywords: [
+    'hegglia',
+    'boligfelt',
+    'utforsk',
+    'tomter',
+    'boligfeltutforsker',
+    'skaun',
+    'trondheim',
+  ],
   openGraph: {
-    url: 'https://hegglia-test.netlify.app/boligfelt',
+    url: 'https://heggliaboligfelt.no/utforsk',
     title: 'Utforsk Boligfeltet | Hegglia Boligfelt',
     description:
       'Få mer informasjon om tomtene på boligfeltet ved å bruke vår boligfeltutforsker.',
@@ -21,9 +30,7 @@ export const metadata: Metadata = {
     emails: ['kontakt@heggliaboligfelt.no'],
     type: 'website',
   },
-
   twitter: {
-    site: '@hegglia',
     card: 'summary_large_image',
     title: 'Hegglia Boligfelt',
     description:

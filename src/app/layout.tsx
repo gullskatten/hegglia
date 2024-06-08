@@ -9,12 +9,13 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://heggliaboligfelt.no'),
+  keywords: ['hegglia', 'boligfelt', 'skaun', 'trondheim'],
   title:
     'Hegglia Boligfelt - Begynn din boligdrøm med nærhet til en fantastisk natur',
   description:
     'Hegglia Boligfelt er et boligfelt under oppføring i Skaun kommune med umiddelbar nærhet til flotte naturopplevelser. Med kort vei til Trondheim sentrum og flotte turmuligheter i nærområdet, er Hegglia Boligfelt et godt sted å starte boligdrømmen.',
   openGraph: {
-    url: 'https://heggliaboligfelt.no',
+    url: '/',
     title: 'Velkommen til Hegglia Boligfelt!',
     description:
       'Hegglia Boligfelt er et boligfelt under oppføring i Skaun kommune med umiddelbar nærhet til flotte naturopplevelser. På denne siden finner du informasjon om tomtene på boligfeltet.',
@@ -26,7 +27,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    site: '@hegglia',
     card: 'summary_large_image',
     title: 'Hegglia Boligfelt',
     description:
@@ -71,11 +71,13 @@ export default function RootLayout({
         <Footer />
         <SpeedInsights />
         <Analytics />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={addOrganizationJsonLd()}
-          key="product-jsonld"
-        />
+        <section>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={addOrganizationJsonLd()}
+            key="product-jsonld"
+          />
+        </section>
       </body>
     </html>
   );
