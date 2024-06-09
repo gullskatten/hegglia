@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     'Få mer informasjon om tomtene på boligfeltet og det planlagte utbyggingsarbeidet.',
   openGraph: {
-    url: 'https://heggliaboligfelt.no/utforsk',
+    url: 'https://www.heggliaboligfelt.no/utforsk',
     title: 'Utforsk Boligfeltet | Hegglia Boligfelt',
     description:
       'Få mer informasjon om tomtene på boligfeltet ved å bruke vår boligfeltutforsker.',

@@ -21,12 +21,12 @@ export default function Boligfelt() {
     "@type": "ListItem",
     "position": 1,
     "name": "Forsiden",
-    "item": "https://heggliaboligfelt.no"
+    "item": "https://www.heggliaboligfelt.no"
   },{
     "@type": "ListItem",
     "position": 2,
     "name": "Utforsk boligfeltet",
-    "item": "https://heggliaboligfelt.no/utforsk"
+    "item": "https://www.heggliaboligfelt.no/utforsk"
   }]
 }
   `,

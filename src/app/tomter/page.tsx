@@ -11,12 +11,12 @@ export default function Page() {
     "@type": "ListItem",
     "position": 1,
     "name": "Forsiden",
-    "item": "https://heggliaboligfelt.no"
+    "item": "https://www.heggliaboligfelt.no"
   },{
     "@type": "ListItem",
     "position": 2,
     "name": "Tomtene på boligfeltet",
-    "item": "https://heggliaboligfelt.no/tomter"
+    "item": "https://www.heggliaboligfelt.no/tomter"
   }]
 }
   `,

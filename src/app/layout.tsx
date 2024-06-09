@@ -8,7 +8,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://heggliaboligfelt.no'),
+  metadataBase: new URL('https://www.heggliaboligfelt.no'),
   keywords: ['hegglia', 'boligfelt', 'skaun', 'trondheim'],
   title:
     'Hegglia Boligfelt - Begynn din boligdrøm med nærhet til en fantastisk natur',

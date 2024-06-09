@@ -3,7 +3,7 @@ import { boligfeltData } from './_data/boligfelt';
 
 function generateData(): MetadataRoute.Sitemap {
   return boligfeltData.map((tomt) => ({
-    url: `https://heggliaboligfelt.no/tomter/${tomt.id}`,
+    url: `https://www.heggliaboligfelt.no/tomter/${tomt.id}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.7,
@@ -13,25 +13,25 @@ function generateData(): MetadataRoute.Sitemap {
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://heggliaboligfelt.no',
+      url: 'https://www.heggliaboligfelt.no',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://heggliaboligfelt.no/utforsk',
+      url: 'https://www.heggliaboligfelt.no/utforsk',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
     {
-      url: `https://heggliaboligfelt.no/tomter`,
+      url: `https://www.heggliaboligfelt.no/tomter`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.6,
     },
     {
-      url: 'https://heggliaboligfelt.no/galleri',
+      url: 'https://www.heggliaboligfelt.no/galleri',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,

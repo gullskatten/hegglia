@@ -14,12 +14,12 @@ export default function Boligfelt() {
     "@type": "ListItem",
     "position": 1,
     "name": "Forsiden",
-    "item": "https://heggliaboligfelt.no"
+    "item": "https://www.heggliaboligfelt.no"
   },{
     "@type": "ListItem",
     "position": 2,
     "name": "Bildegalleri",
-    "item": "https://heggliaboligfelt.no/galleri"
+    "item": "https://www.heggliaboligfelt.no/galleri"
   }]
 }
   `,

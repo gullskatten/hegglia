@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         type: 'website',
         images: [
           {
-            url: 'https://heggliaboligfelt.no/opengraph-image.png',
+            url: 'https://www.heggliaboligfelt.no/opengraph-image.png',
             width: 1200,
             height: 630,
             alt: 'Hegglia Boligfelt',
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           'På denne siden finner du en oversikt over tomtene på boligfeltet.',
         images: [
           {
-            url: 'https://heggliaboligfelt.no/twitter-image.png',
+            url: 'https://www.heggliaboligfelt.no/twitter-image.png',
             width: 1200,
             height: 600,
             alt: 'Hegglia Boligfelt',
@@ -129,17 +129,17 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
     "@type": "ListItem",
     "position": 1,
     "name": "Forsiden",
-    "item": "https://heggliaboligfelt.no"
+    "item": "https://www.heggliaboligfelt.no"
   },{
     "@type": "ListItem",
     "position": 2,
     "name": "Tomtene på boligfeltet",
-    "item": "https://heggliaboligfelt.no/tomter"
+    "item": "https://www.heggliaboligfelt.no/tomter"
   },{
     "@type": "ListItem",
     "position": 3,
     "name": ${tomt.name},
-    "item": "https://heggliaboligfelt.no/tomter/${tomt.id}"
+    "item": "https://www.heggliaboligfelt.no/tomter/${tomt.id}"
   }]
 }
   `,

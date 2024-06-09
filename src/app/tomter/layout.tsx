@@ -23,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: 'website',
       images: [
         {
-          url: 'https://heggliaboligfelt.no/opengraph-image.png',
+          url: 'https://www.heggliaboligfelt.no/opengraph-image.png',
           width: 1200,
           height: 630,
           alt: 'Hegglia Boligfelt',
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
         'På denne siden finner du en oversikt over tomtene på boligfeltet.',
       images: [
         {
-          url: 'https://heggliaboligfelt.no/twitter-image.png',
+          url: 'https://www.heggliaboligfelt.no/twitter-image.png',
           width: 1200,
           height: 600,
           alt: 'Hegglia Boligfelt',
