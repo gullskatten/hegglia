@@ -104,9 +104,9 @@ const naturopplevelser = {
 
 const sentralt = {
   id: '4',
-  heading: 'Sentralt men fredelig',
+  heading: 'Fredelig, men tilgjengelig',
   description:
-    'Selv om tomten ligger i et rolig og fredelig boligfelt, er det kort vei til skoler og offentlig transport.',
+    'Selv om tomten ligger i et rolig og fredelig boligfelt, er det kort vei til barnehage og skole. Kollektivtransport er også tilgjengelig i området.',
   href: 'https://www.skaun.kommune.no/visste-du-at-du-kan-bestille-buss-til-doera.6618258-158571.html',
 };
 

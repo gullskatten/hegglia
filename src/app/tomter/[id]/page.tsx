@@ -235,11 +235,20 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
                   {tomt.tomtFeatures.map((feature) => (
                     <li
                       key={feature.id}
-                      className="flex flex-col gap-1 text-pretty rounded-md  p-3 ">
+                      className="flex flex-col gap-1 text-pretty rounded-md p-3">
                       <h4 className="font-bold text-teal-800">
                         {feature.heading}
                       </h4>
                       <p>{feature.description}</p>
+                      {feature.href != null && (
+                        <a
+                          href={feature.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-slate-600 underline underline-offset-2">
+                          Les mer (ekstern side)
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
