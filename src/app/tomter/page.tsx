@@ -1,19 +1,54 @@
-import { ArrowLeftIcon } from '@heroicons/react/24/outline';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { boligfeltData } from '../_data/boligfelt';
 import Link from 'next/link';
 
 export default function Page() {
+  const tomterJsonLd = {
+    __html: `{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Forsiden",
+    "item": "https://heggliaboligfelt.no"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Tomtene på boligfeltet",
+    "item": "https://heggliaboligfelt.no/tomter"
+  }]
+}
+  `,
+  };
+
   return (
     <div className="relative isolate flex h-full w-full animate-fadeIn flex-col items-center justify-center gap-3">
+      <section className="sr-only">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={tomterJsonLd}
+          key="product-jsonld"
+        />
+      </section>
       <div className="absolute -z-10 h-full w-full bg-topology-pattern bg-repeat opacity-10" />
-      <div className="sticky top-0 z-10 flex h-10 w-full items-center justify-between bg-teal-950 px-3">
-        <Link
-          title={`Gå til tilbake til forsiden`}
-          href={`/`}
-          className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
-          <ArrowLeftIcon className="h-4 w-4 text-white" />
-          Tilbake til forsiden
-        </Link>
+      <div className="sticky top-0 z-10 flex h-10 w-full items-center justify-between bg-teal-950">
+        <nav className="flex w-full items-start">
+          <ol className="flex items-center gap-1 rounded-r-full bg-teal-900/50  px-5 py-1 text-xs">
+            <li>
+              <Link
+                href="/"
+                className="flex items-center gap-1 font-medium underline">
+                Forsiden <ChevronRightIcon className="h-3 w-3 text-white" />
+              </Link>
+            </li>
+            <li className="truncate font-bold">
+              <Link href={`/tomter`} className="truncate font-bold">
+                Tomtene på boligfeltet
+              </Link>
+            </li>
+          </ol>
+        </nav>
       </div>
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
         <div className="flex min-w-72 flex-col items-center justify-center gap-3 text-center">

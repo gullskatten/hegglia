@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../globals.css';
 import Nav from '../_components/nav';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -9,15 +9,6 @@ export const metadata: Metadata = {
   title: 'Utforsk Boligfeltet | Hegglia Boligfelt',
   description:
     'Få mer informasjon om tomtene på boligfeltet og det planlagte utbyggingsarbeidet.',
-  keywords: [
-    'hegglia',
-    'boligfelt',
-    'utforsk',
-    'tomter',
-    'boligfeltutforsker',
-    'skaun',
-    'trondheim',
-  ],
   openGraph: {
     url: 'https://heggliaboligfelt.no/utforsk',
     title: 'Utforsk Boligfeltet | Hegglia Boligfelt',

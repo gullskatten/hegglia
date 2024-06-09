@@ -2,21 +2,14 @@ import { InformationCircleIcon } from '@heroicons/react/20/solid';
 import { boligfeltData } from '../../_data/boligfelt';
 import Carousel from './Carousel';
 import Link from 'next/link';
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  ListBulletIcon,
-} from '@heroicons/react/24/outline';
-import type { Metadata, ResolvingMetadata } from 'next';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline';
+import type { Metadata } from 'next';
 
 type Props = {
   params: { id: string };
 };
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = params.id;
   const matchingTomt = boligfeltData.find((item) => item.id === id);
 
@@ -128,49 +121,101 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
   const nextTomt = boligfeltData.find((item) => item.id === `${tomtId + 1}`);
   const prevTomt = boligfeltData.find((item) => item.id === `${tomtId - 1}`);
 
+  const tomtJsonLd = {
+    __html: `{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Forsiden",
+    "item": "https://heggliaboligfelt.no"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Tomtene på boligfeltet",
+    "item": "https://heggliaboligfelt.no/tomter"
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "name": ${tomt.name},
+    "item": "https://heggliaboligfelt.no/tomter/${tomt.id}"
+  }]
+}
+  `,
+  };
+
   return (
     <div className=" isolate flex h-full w-full animate-fadeIn flex-col items-center justify-center gap-3">
-      <div className="sticky top-0 z-10 flex h-10 w-full items-center justify-between bg-teal-950 px-3">
-        {prevTomt != null ? (
-          <Link
-            title={`Gå til ${prevTomt?.name}`}
-            href={`/tomter/${prevTomt.id}`}
-            className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
-            <ChevronLeftIcon className="h-4 w-4 text-white" />
-            Forrige
-          </Link>
-        ) : (
-          <Link
-            title={`Gå til ${boligfeltData[boligfeltData.length - 1]?.name}`}
-            href={`/tomter/${boligfeltData[boligfeltData.length - 1]?.id}`}
-            className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
-            <ChevronLeftIcon className="h-4 w-4 text-white" />
-            Forrige
-          </Link>
-        )}
-        <Link
-          title={`Gå til oversikten over tomtene`}
-          href={`/tomter`}
-          className="flex items-center gap-1.5 p-1 font-bold text-white/90 underline focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
-          Tilbake til oversikten
-        </Link>
-        {nextTomt != null ? (
-          <Link
-            title={`Gå til ${nextTomt?.name}`}
-            href={`/tomter/${nextTomt.id}`}
-            className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
-            Neste
-            <ChevronRightIcon className="h-4 w-4 text-white" />
-          </Link>
-        ) : (
-          <Link
-            title={`Gå til ${boligfeltData[0]?.name}`}
-            href={`/tomter/${boligfeltData[0]?.id}`}
-            className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
-            Neste
-            <ChevronRightIcon className="h-4 w-4 text-white" />
-          </Link>
-        )}
+      <section className="sr-only">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={tomtJsonLd}
+          key="product-jsonld"
+        />
+      </section>
+      <div className="sticky top-0 z-10 flex w-full flex-col bg-teal-950">
+        <nav>
+          <ol className="flex items-center gap-1  bg-teal-900/50  px-5 py-1 text-xs">
+            <li>
+              <Link
+                href="/"
+                className="flex items-center gap-1 font-medium underline">
+                Forsiden <ChevronRightIcon className="h-3 w-3 text-white" />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/tomter"
+                className="flex items-center gap-1 truncate font-medium underline">
+                Tomtene på boligfeltet
+                <ChevronRightIcon className="h-3 w-3 text-white" />
+              </Link>
+            </li>
+            <li className="truncate font-bold">
+              <Link href={`/tomter/${tomt.id}`} className="truncate font-bold">
+                {tomt.name}
+              </Link>
+            </li>
+          </ol>
+        </nav>
+        <div className="flex w-full items-center justify-between px-3 pt-1">
+          {prevTomt != null ? (
+            <Link
+              title={`Gå til ${prevTomt?.name}`}
+              href={`/tomter/${prevTomt.id}`}
+              className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
+              <ChevronLeftIcon className="h-4 w-4 text-white" />
+              Forrige
+            </Link>
+          ) : (
+            <Link
+              title={`Gå til ${boligfeltData[boligfeltData.length - 1]?.name}`}
+              href={`/tomter/${boligfeltData[boligfeltData.length - 1]?.id}`}
+              className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
+              <ChevronLeftIcon className="h-4 w-4 text-white" />
+              Forrige
+            </Link>
+          )}
+
+          {nextTomt != null ? (
+            <Link
+              title={`Gå til ${nextTomt?.name}`}
+              href={`/tomter/${nextTomt.id}`}
+              className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
+              Neste
+              <ChevronRightIcon className="h-4 w-4 text-white" />
+            </Link>
+          ) : (
+            <Link
+              title={`Gå til ${boligfeltData[0]?.name}`}
+              href={`/tomter/${boligfeltData[0]?.id}`}
+              className="flex items-center gap-1.5 p-1 font-bold text-white focus:shadow-[0_0_0_2px] focus:shadow-teal-400 focus:outline-none">
+              Neste
+              <ChevronRightIcon className="h-4 w-4 text-white" />
+            </Link>
+          )}
+        </div>
       </div>
       <article className="w-full max-w-xl sm:rounded-md sm:shadow-xl">
         {tomt.images.length > 0 && (

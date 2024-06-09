@@ -2,10 +2,56 @@ import Image from 'next/image';
 
 import { images } from '../utforsk/ImageCarousel';
 import { ArrowsPointingOutIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
 
 export default function Boligfelt() {
+  const galleriJsonLd = {
+    __html: `{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Forsiden",
+    "item": "https://heggliaboligfelt.no"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Bildegalleri",
+    "item": "https://heggliaboligfelt.no/galleri"
+  }]
+}
+  `,
+  };
+
   return (
     <div className="relative w-full">
+      <section className="sr-only">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={galleriJsonLd}
+          key="product-jsonld"
+        />
+      </section>
+      <div className="sticky top-0 z-10 flex h-10 w-full items-center justify-between bg-teal-950">
+        <nav className="flex w-full items-start">
+          <ol className="flex items-center gap-1 rounded-r-full bg-teal-900/50  px-5 py-1 text-xs">
+            <li>
+              <Link
+                href="/"
+                className="flex items-center gap-1 font-medium underline">
+                Forsiden <ChevronRightIcon className="h-3 w-3 text-white" />
+              </Link>
+            </li>
+            <li className="truncate font-bold">
+              <Link href={`/utforsk`} className="truncate font-bold">
+                Bildegalleri
+              </Link>
+            </li>
+          </ol>
+        </nav>
+      </div>
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
         <div className="absolute z-0 h-full w-full bg-topology-pattern bg-repeat opacity-10" />
         <div className="flex min-w-72 flex-col items-center justify-center gap-3 text-center">
@@ -38,8 +84,8 @@ export default function Boligfelt() {
             <a
               title={`Åpne bilde ${idx + 1} i full størrelse`}
               href={img.srcFull}
-              className="absolute right-0 top-0 rounded-tr-md bg-teal-800 p-1">
-              <ArrowsPointingOutIcon className="h-4 w-4 text-white" />
+              className="absolute right-0 top-0 flex items-center gap-1.5 rounded-bl-md rounded-tr-md bg-teal-800 px-3 py-1 text-xs font-medium text-white">
+              Vis i full størrelse <ArrowsPointingOutIcon className="h-3 w-3" />
             </a>
           </div>
         ))}

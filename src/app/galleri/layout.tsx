@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../globals.css';
 import Nav from '../_components/nav';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: 'Bildegalleri | Hegglia Boligfelt',
   description: 'Se bilder fra boligfeltet og det planlagte utbyggingsarbeidet.',
   openGraph: {
-    url: 'https://heggliaboligfelt.no/galleri',
+    url: '/galleri',
     title: 'Bildegalleri | Hegglia Boligfelt',
     description:
       'Se bilder fra boligfeltet og det planlagte utbyggingsarbeidet.',
@@ -37,9 +37,7 @@ export default function Layout({
     <div>
       <div
         className={`${inter.className} flex min-h-screen flex-col bg-teal-950 antialiased`}>
-        <div className="sticky top-0 z-10">
-          <Nav />
-        </div>
+        <Nav />
         {children}
       </div>
     </div>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import '../globals.css';
 import Nav from '../_components/nav';
+import '../globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -10,7 +10,6 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Tomtene på boligfeltet | Hegglia Boligfelt',
     description:
       'På denne siden finner du en oversikt over tomtene på boligfeltet.',
-    keywords: ['hegglia', 'boligfelt', 'tomter', 'salg', 'skaun', 'trondheim'],
     openGraph: {
       url: '/tomter',
       title: 'Tomtene på boligfeltet | Hegglia Boligfelt',

@@ -6,11 +6,60 @@ import { ArrowUpIcon } from '@heroicons/react/24/solid';
 import BoligfeltTable from './BoligfeltTable';
 import cover from '../../../public/byggefelt/tomt/flyover_cover_1_50s.png';
 import Link from 'next/link';
-import { ArrowRightIcon, ListBulletIcon } from '@heroicons/react/24/outline';
+import {
+  ArrowRightIcon,
+  ChevronRightIcon,
+  ListBulletIcon,
+} from '@heroicons/react/24/outline';
 
 export default function Boligfelt() {
+  const utforskJsonLd = {
+    __html: `{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Forsiden",
+    "item": "https://heggliaboligfelt.no"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Utforsk boligfeltet",
+    "item": "https://heggliaboligfelt.no/utforsk"
+  }]
+}
+  `,
+  };
+
   return (
-    <div className="relative w-full">
+    <div className="relative isolate w-full">
+      <section className="sr-only">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={utforskJsonLd}
+          key="product-jsonld"
+        />
+      </section>
+      <div className="sticky top-0 z-10 flex h-10 w-full items-center justify-between bg-teal-950">
+        <nav className="flex w-full items-start">
+          <ol className="flex items-center gap-1 rounded-r-full bg-teal-900/50  px-5 py-1 text-xs">
+            <li>
+              <Link
+                href="/"
+                className="flex items-center gap-1 font-medium underline">
+                Forsiden <ChevronRightIcon className="h-3 w-3 text-white" />
+              </Link>
+            </li>
+            <li className="truncate font-bold">
+              <Link href={`/utforsk`} className="truncate font-bold">
+                Utforsk boligfeltet
+              </Link>
+            </li>
+          </ol>
+        </nav>
+      </div>
+
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
         <div className="absolute z-0 h-full w-full bg-topology-pattern bg-repeat opacity-10" />
 
@@ -53,9 +102,9 @@ export default function Boligfelt() {
           <Link
             href="/tomter"
             className="flex items-center gap-5 rounded-md  bg-teal-700 px-5 py-2 text-white transition-colors hover:bg-teal-600 focus:outline-teal-500 focus:ring-teal-600">
-            <ListBulletIcon className="h-6 w-6" />
-            <span className=" flex items-center gap-3 text-xl font-bold">
-              Informasjon om tomtene <ArrowRightIcon className="h-5 w-5" />
+            <ListBulletIcon className="h-5 w-5" />
+            <span className=" flex items-center gap-3  font-bold">
+              Informasjon om tomtene <ArrowRightIcon className="h-4 w-4" />
             </span>
           </Link>
         </div>
