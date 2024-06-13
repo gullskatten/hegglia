@@ -138,7 +138,7 @@ export default function Page({ params: { id } }: { params: { id: string } }) {
   },{
     "@type": "ListItem",
     "position": 3,
-    "name": ${tomt.name},
+    "name": "${tomt.name}",
     "item": "https://www.heggliaboligfelt.no/tomter/${tomt.id}"
   }]
 }
