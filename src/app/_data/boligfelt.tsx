@@ -123,7 +123,6 @@ const utsikt = {
   heading: 'Flott utsikt',
   description:
     'Tomten ligger i et høydedrag med utsikt over dalen og skogsområdet. Her kan du nyte en flott utsikt fra din egen hage.',
-  href: 'https://www.skaun.kommune.no/skoleskyss.597243.no.html',
 };
 
 export const boligfeltData: Array<TomtData> = [
