@@ -59,7 +59,6 @@ export default function Boligfelt() {
           </ol>
         </nav>
       </div>
-
       <div className="relative isolate flex w-full flex-col items-center gap-5 ">
         <div className="absolute z-0 h-full w-full bg-topology-pattern bg-repeat opacity-10" />
 
@@ -77,7 +76,6 @@ export default function Boligfelt() {
         <div className="relative z-[1] flex animate-float place-items-center pb-5">
           <BoligfeltChart />
         </div>
-
         <div className="z-10 flex w-full justify-end">
           <a
             href="https://maps.app.goo.gl/ZjPcx9e3bLakYwgbA?g_st=ic"
@@ -90,7 +88,6 @@ export default function Boligfelt() {
           </a>
         </div>
       </div>
-
       <section className="flex w-full flex-col gap-1.5 bg-teal-900 px-5 py-10">
         <div className="flex w-full items-center justify-center">
           <h2 className="flex items-center gap-1.5 text-3xl font-bold">

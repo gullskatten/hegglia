@@ -136,7 +136,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Denne tomten ligger nederst i boligfeltet og er blant de største tomtene i boligfeltet. Dette gir god plass til en stor bolig og hage.',
     kvm: 1300,
-    price: 700000,
+    price: 750000,
     type: 'path',
     available: true,
     x: '290',
@@ -159,7 +159,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Denne tomten ligger nederst og innerst i boligfeltet. Sammen med tomt 1 er den blant de største tomtene i boligfeltet. Her er det gode muligheter for både stor hage og en større bolig!',
     kvm: 1300,
-    price: 700000,
+    price: 750000,
     type: 'path',
     available: true,
     x: '325',
@@ -182,7 +182,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Tomten ligger lett ankommelig i svingen inn mot den nederste delen av boligfeltet. Tomten skråner svakt oppover, noe som gir gode muligheter for en bolig med utsikt over dalen.',
     kvm: 800,
-    price: 450000,
+    price: 600000,
     type: 'path',
     available: true,
     x: '190',
@@ -206,7 +206,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Denne tomten er plassert i midten av boligfeltet. En stor tomt som skråner svakt oppover gir gode utsiktmuligheter og plass til en stor bolig.',
     kvm: 900,
-    price: 550000,
+    price: 650000,
     available: true,
     type: 'polygon',
     x: '215',
@@ -230,7 +230,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Denne flotte tomten har en fin beliggenhet innerst i veien. I likhet med tomt 3 og 4 skråner tomten svakt oppover som gir gode utsiktsforhold. En stor tomt med mange muligheter!',
     kvm: 900,
-    price: 500000,
+    price: 650000,
     type: 'polygon',
     available: true,
     x: '245',
@@ -254,7 +254,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Denne tomten ligger praktisk til i svingen inn til den øverste delen av boligfeltet. Her er det gode muligheter for en stor bolig med utsikt over dalen.',
     kvm: 900,
-    price: 400000,
+    price: 600000,
     type: 'path',
     available: true,
     x: '130',
@@ -310,7 +310,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'Dette er den ytterste av tomtente øverst i boligfeltet. Tomten har en flott beliggenhet med utsikt over dalen, og er en av de største tomtene i feltet.',
     kvm: 1200,
-    price: 550000,
+    price: 650000,
     available: true,
     type: 'path',
     tomtFeatures: [
@@ -334,7 +334,7 @@ export const boligfeltData: Array<TomtData> = [
     description:
       'I likhet med tomt 9 er denne tomten blant de største i boligfeltet. Med god plass til en stor bolig og hage, er dette en flott tomt for deg som ønsker god plass kombinert med en flott utsikt.',
     kvm: 1200,
-    price: 600000,
+    price: 700000,
     available: true,
     type: 'path',
     tomtFeatures: [
@@ -358,7 +358,7 @@ export const boligfeltData: Array<TomtData> = [
     kvm: 1100,
     x: '65',
     y: '490',
-    price: 650000,
+    price: 700000,
     available: true,
     type: 'path',
     tomtFeatures: [

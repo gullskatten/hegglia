@@ -39,7 +39,6 @@ export default function Home() {
           alt="Hegglia Boligfelt"
           className="absolute -z-10 flex h-full w-full flex-grow bg-cover bg-no-repeat object-cover shadow-lg brightness-90"
         />
-
         <div className="relative z-[1] flex select-none place-items-center pb-12 pt-24 before:absolute before:h-[500px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-cont-400 before:to-white before:opacity-10 before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[200px] after:w-full after:bg-gradient-radial after:from-cont-400 after:via-amber-800 after:to-amber-800  after:opacity-40 after:blur-2xl after:content-['']">
           <Image
             className="relative max-w-64 animate-fadeIn select-none sm:max-w-80"
